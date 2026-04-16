@@ -11,7 +11,9 @@ class ReleasePinSoftware : public ReleasePin
 
 {
 public:
-    ReleasePinSoftware(int pinNumber);
+    ReleasePinSoftware(int pinNumber) : ReleasePin(pinNumber, true, DEBUG_TEXT_PREFIX + std::to_string(pinNumber)){
+
+    }
     ~ReleasePinSoftware() override = default;
      void setValue(float value) override;
      void enable(bool flag) override;

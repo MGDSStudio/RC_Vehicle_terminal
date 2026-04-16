@@ -8,12 +8,13 @@
 
 #include "Pin.h"
 #include "PinCommon.h"
+#include "ReleasePin.h"
 
 class SinglePinActor {
 
 public:
-    SinglePinActor(Pin* pin){
-        this->softwareDebugOnlyPin = pin;
+    SinglePinActor(ReleasePin* pin){
+        this->softwarePin = pin;
     }
 
     SinglePinActor(){
@@ -21,11 +22,12 @@ public:
     }
 
     ~SinglePinActor(){
-        this->softwareDebugOnlyPin = nullptr;
-        pinCommon = nullptr;
+        this->softwarePin = nullptr;
+        hardwarePin = nullptr;
+        Logger::debug("Maybe delete manually at SinglePinActor");
     }
 
-    void setPin(Pin* pin);
+    void setSoftwarePin(ReleasePin* pin);
 
     void setValue(float value) const;
     
@@ -33,11 +35,12 @@ public:
 
     void complete() const;
 
-    void setPinCommon(PinCommon* pin_common);
+    void setHardwarePin(ReleasePin* pin_common);
 
 private:
-    Pin* softwareDebugOnlyPin = nullptr;
-    PinCommon* pinCommon = nullptr;
+    ReleasePin* softwarePin = nullptr;
+    ReleasePin* hardwarePin = nullptr;
+    //PinCommon* pinCommon = nullptr;
     float direction;
 };
 

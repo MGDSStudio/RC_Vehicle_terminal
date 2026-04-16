@@ -4,30 +4,27 @@
 
 #include "SinglePinActor.h"
 
-
-
-
-void SinglePinActor::setPin(Pin* pin){
-    this->softwareDebugOnlyPin = pin;
+void SinglePinActor::setSoftwarePin(ReleasePin* pin){
+    this->softwarePin = pin;
 }
 
 void SinglePinActor::setValue(float value) const {
-    softwareDebugOnlyPin->setValue(value);
-    pinCommon->setValue(value);
+    softwarePin->setValue(value);
+    hardwarePin->setValue(value);
 }
     
 void SinglePinActor::enable(bool flag) const {
-    softwareDebugOnlyPin->enable(flag);
-    pinCommon->enable(flag);
+    softwarePin->enable(flag);
+    hardwarePin->enable(flag);
 }
 
 void SinglePinActor::complete() const {
-    softwareDebugOnlyPin->complete();
-    pinCommon->complete();
+    softwarePin->complete();
+    hardwarePin->complete();
 }
 
 
 
-void SinglePinActor::setPinCommon(PinCommon *pin_common) {
-    this->pinCommon = pin_common;
+void SinglePinActor::setHardwarePin(ReleasePin *pin_common) {
+    this->hardwarePin = pin_common;
 }

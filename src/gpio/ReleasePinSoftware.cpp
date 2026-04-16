@@ -4,10 +4,6 @@
 
 #include "ReleasePinSoftware.h"
 
-ReleasePinSoftware::ReleasePinSoftware(int pinNumber)
-{
-    initDebug(true, DEBUG_TEXT_PREFIX + std::to_string(pinNumber));
-}
 
 void ReleasePinSoftware::setValue(float value)
 {

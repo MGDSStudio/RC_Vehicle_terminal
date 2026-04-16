@@ -21,8 +21,14 @@ void BuzzerController::init() {
     std::pmr::unordered_map<PinActionName, int> *map = pins_initializer.getPins();
     auto buzzerPin = map->at(PinActionName::BUZZER);
     Logger::debug("buzzer pin at: " + std::to_string(buzzerPin) + " init successfully");
-    this->buzzer.setPin(new SoftwarePin(buzzerPin));
-    this->buzzer.setPinCommon(new PinCommon(buzzerPin));
+    bool enableSoftwarePin = true;
+    #ifdef IS_RPI
+        enableSoftwarePin = false;
+    #endif
+    this->buzzer.setHardwarePin(new ReleasePinHardware(buzzerPin));
+    if (!enableSoftwarePin) buzzerPin = -1;
+    this->buzzer.setSoftwarePin(new ReleasePinSoftware(buzzerPin));
+
     LocalCommandsListenersObserverSingleton::getInstance().subscribe(this);
 }
 
@@ -68,4 +74,4 @@ failed with
 
 [build] /home/mgdsstudio/Embedded/Programming/RC_Vehicle/RC_Vehicle/src/BuzzerController.cpp: In member function ‘void BuzzerController::init()’:
 [build] /home/mgdsstudio/Embedded/Programming/RC_Vehicle/RC_Vehicle/src/BuzzerController.cpp:13:29: error: expected type-specifier before ‘SoftwarePin’
-[build]    13 |     this->buzzer.setPin(new SoftwarePin(buzzerPin));*/
+[build]    13 |     this->buzzer.setSoftwarePin(new SoftwarePin(buzzerPin));*/

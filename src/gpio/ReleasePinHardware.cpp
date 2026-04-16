@@ -4,26 +4,47 @@
 
 #include "ReleasePinHardware.h"
 
-
+/*
 ReleasePinHardware::ReleasePinHardware(int pinNumber)
 {
-    initDebug(true, DEBUG_TEXT_PREFIX + std::to_string(pinNumber));
-}
+    }
 
+ */
 void ReleasePinHardware::setValue(float value)
 {
-    log("value set: " + std::to_string(value));
+    #ifdef IS_RPI
+        float mapped = mapForPwm(value);
+        gpioPWM(pinNumber, mapped);
+    #endif
 }
 
 void ReleasePinHardware::enable(bool flag)
 {
-    ReleasePinHardware::enable(flag);
-    if (flag) log("high level set");
-    else log("low level set");
+    #ifdef IS_RPI
+        if (flag){
+            gpioPWM(pinNumber, ENABLED_PWM_VALUE);
+            log("high level set");
+        }
+        else {
+            gpioPWM(pinNumber, DISABLED_PWM_VALUE);
+            log("low level set");
+        }
+    #endif
 }
 
 void ReleasePinHardware::complete()
 {
-    log("nothing to complete in software pin");
+    #ifdef IS_RPI
+        gpioPWM(pinNumber, DISABLED_PWM_VALUE);
+        log("completed. Pin PWM-value set to " + std::to_string(DISABLED_PWM_VALUE));
+    #endif
 }
 
+int ReleasePinHardware::mapForPwm(float fromMinusOneUpToOne){
+    float ostart = -1;
+    float ostop = 1;
+    float istart = ENABLED_PWM_VALUE;
+    float istop = DISABLED_PWM_VALUE;
+    float mapped = ostart + (ostop - ostart) * ((fromMinusOneUpToOne - istart) / (istop - istart));
+    return (int)mapped;
+}

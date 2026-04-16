@@ -5,12 +5,16 @@
 #ifndef RC_VEHICLE_TERMINAL_RELEASEPINHARDWARE_H
 #define RC_VEHICLE_TERMINAL_RELEASEPINHARDWARE_H
 #include "ReleasePin.h"
+#ifdef IS_RPI
+    #include <pigpio.h>
+#endif
 
 
 class ReleasePinHardware : public ReleasePin
 {
 public:
-    ReleasePinHardware(int pinNumber);
+    ReleasePinHardware(int pinNumber) : ReleasePin(pinNumber, true, DEBUG_TEXT_PREFIX + std::to_string(pinNumber)){
+    }
     ~ReleasePinHardware() override = default;
     void setValue(float value) override;
     void enable(bool flag) override;
@@ -18,6 +22,9 @@ public:
 
 private:
     const std::string DEBUG_TEXT_PREFIX = "HARDWARE_PIN ";
+    const int ENABLED_PWM_VALUE = 0;
+    const int DISABLED_PWM_VALUE = 255;
+    int mapForPwm(float fromMinusOneUpToOne);
 };
 
 

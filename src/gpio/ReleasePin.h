@@ -11,19 +11,26 @@ class ReleasePin
 {
 
 public:
+    ReleasePin(int pinNumber, bool debug, std::string prefix){
+        this->pinNumber = pinNumber;
+        this->debug = debug;
+        this->debugPrefixName = (prefix +  + ": ");
+    }
     virtual ~ReleasePin() = default;
     virtual void setValue(float value) = 0;
     virtual void enable(bool flag) = 0;
     virtual void complete() = 0;
+private:
+    inline static int NOT_INIT_PIN_VAL = -1;
 
 protected:
     bool debug;
-    int pinNumber = -1;
+    int pinNumber = NOT_INIT_PIN_VAL;
     std::string debugPrefixName = "PIN: ";
 
     void log(std::string text)
     {
-        if (debug)
+        if (debug && pinNumber != NOT_INIT_PIN_VAL)
         {
             Logger::custom(debugPrefixName, text);
         }
