@@ -1,0 +1,15 @@
+//
+// Created by gorod on 16.04.2026.
+//
+
+#ifndef RC_VEHICLE_TERMINAL_MAINCONTROLLER_H
+#define RC_VEHICLE_TERMINAL_MAINCONTROLLER_H
+
+
+class MainController
+{
+
+};
+
+
+#endif //RC_VEHICLE_TERMINAL_MAINCONTROLLER_H

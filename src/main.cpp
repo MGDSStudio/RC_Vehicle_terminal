@@ -1,47 +1,73 @@
 #include <SDL3/SDL.h>
-#include <SDL3/SDL_main.h> // Essential for cross-platform entry point
+#include <SDL3/SDL_main.h>
+#include <iostream>
+#include  "Logger.h"
+#ifdef _WIN32
+#include <windows.h>
+#endif
+
+void dispose();
 
 int main(int argc, char* argv[]) {
-    // 1. Initialize SDL Video
-    if (!SDL_Init(SDL_INIT_VIDEO)) {
-        SDL_Log("Couldn't initialize SDL: %s", SDL_GetError());
+        #ifdef _WIN32
+            SetConsoleOutputCP(CP_UTF8);
+            SetConsoleCP(CP_UTF8);
+        #endif
+    // 1. Инициализируем только подсистемы ввода
+
+
+    Logger::debug("Launched");
+    if (!SDL_Init(SDL_INIT_GAMEPAD | SDL_INIT_JOYSTICK)) {
+        SDL_Log("Ошибка инициализации SDL: %s", SDL_GetError());
         return 1;
     }
 
-    // 2. Create a window and a renderer
-    SDL_Window* window = nullptr;
-    SDL_Renderer* renderer = nullptr;
+    std::cout << "Поиск геймпадов... Нажмите Ctrl+C для выхода." << std::endl;
 
-
-    if (!SDL_CreateWindowAndRenderer("SDL3 Hello World", 800, 600, 0, &window, &renderer)) {
-        SDL_Log("Couldn't create window/renderer: %s", SDL_GetError());
-        SDL_Quit();
-        return 1;
-    }
-
-    bool keep_running = true;
+    bool running = true;
     SDL_Event event;
+    SDL_Gamepad* gamepad = nullptr;
 
-    // 3. Main Loop
-    while (keep_running) {
+    while (running) {
+        // 2. Опрашиваем события (обязательно для работы геймпада)
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_EVENT_QUIT) {
-                keep_running = false;
+                running = false;
+            }
+            if (event.type == SDL_EVENT_GAMEPAD_ADDED) {
+                if (!gamepad) {
+                    gamepad = SDL_OpenGamepad(event.gdevice.which);
+                    if (gamepad) {
+                        std::cout << "Геймпад подключен: " << SDL_GetGamepadName(gamepad) << std::endl;
+                    }
+                }
+            }
+            if (event.type == SDL_EVENT_GAMEPAD_BUTTON_DOWN) {
+                std::cout << "Нажата кнопка: " << (int)event.gbutton.button << std::endl;
+            }
+            if (event.type == SDL_EVENT_GAMEPAD_AXIS_MOTION) {
+                // Выводим только если отклонение значительное (мертвая зона)
+                if (abs(event.gaxis.value) > 8000) {
+                    std::cout << "Ось " << (int)event.gaxis.axis << " значение: " << event.gaxis.value << std::endl;
+                }
+            }
+            if (event.type == SDL_EVENT_GAMEPAD_REMOVED) {
+                std::cout << "Геймпад отключен." << std::endl;
+                SDL_CloseGamepad(gamepad);
+                gamepad = nullptr;
             }
         }
-
-        // 4. Rendering (Dark Blue background)
-        SDL_SetRenderDrawColor(renderer, 20, 40, 100, 255);
-        SDL_RenderClear(renderer);
-
-        // Present the backbuffer
-        SDL_RenderPresent(renderer);
+        // Небольшая задержка, чтобы не нагружать процессор (особенно важно для RPi Zero)
+        SDL_Delay(10);
     }
 
-    // 5. Cleanup
-    SDL_DestroyRenderer(renderer);
-    SDL_DestroyWindow(window);
+    if (gamepad) SDL_CloseGamepad(gamepad);
+    dispose();
     SDL_Quit();
-
     return 0;
+}
+
+void dispose()
+{
+
 }
