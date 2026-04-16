@@ -24,14 +24,14 @@ void ReleasePinHardware::enable(bool flag)
         if (flag){
             gpioWrite(pinNumber, ENABLE_PIN);
             gpioWrite(4, ENABLE_PIN);
-            gpioWrite(6, ENABLE_PIN);
+            gpioWrite(5, ENABLE_PIN);
             gpioWrite(27, ENABLE_PIN);
             gpioWrite(20, ENABLE_PIN);
             /*
 
 
             gpioPWM(4, 200);
-            gpioPWM(6, 200);
+            gpioPWM(5, 200);
             gpioPWM(27, 200);
             gpioPWM(20, 200);
             */
@@ -41,7 +41,7 @@ void ReleasePinHardware::enable(bool flag)
         else {
             gpioWrite(pinNumber, DISABLE_PIN);
             gpioWrite(4, DISABLE_PIN);
-            gpioWrite(6, DISABLE_PIN);
+            gpioWrite(5, DISABLE_PIN);
             gpioWrite(27, DISABLE_PIN);
             gpioWrite(20, DISABLE_PIN);
             //gpioPWM(pinNumber, DISABLED_PWM_VALUE);
