@@ -102,6 +102,7 @@ void GamepadController::updateButtonPressed(SDL_Event* event, LocalCommand* loca
     const auto localPrefix = getPrefixForButton(event->gbutton.button);
     local_command->setPrefix(localPrefix);
     local_command->setFloatValue(Constants::MAX_GAMEPAD_AXIS_VALUE);
+    local_command->setBoolValue(true);
 }
 
 void GamepadController::updateButtonReleased(SDL_Event* event, LocalCommand* local_command)
@@ -109,6 +110,7 @@ void GamepadController::updateButtonReleased(SDL_Event* event, LocalCommand* loc
     const auto localPrefix = getPrefixForButton(event->gbutton.button);
     local_command->setPrefix(localPrefix);
     local_command->setFloatValue(Constants::NEUTRAL_GAMEPAD_AXIS_VALUE);
+    local_command->setBoolValue(false);
 }
 
 void GamepadController::updateAxisMoved(SDL_Event* event, LocalCommand* local_command)
@@ -134,7 +136,9 @@ LocalCommandPrefix GamepadController::getPrefixForButton(uint8_t buttonCode)
         }
         else if (name == SWITCH_OFF) {
             local_command_prefix = LocalCommandPrefix::SWITCH_OFF;
-            *this->completeFlagInputLevel = true;
+            //if (this->completeFlagInputLevel != nullptr) {
+                *this->completeFlagInputLevel = true;
+            //}
         }
         else if (name == PAUSE) {
             local_command_prefix = LocalCommandPrefix::PAUSE;

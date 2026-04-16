@@ -22,8 +22,8 @@ public:
     }
 
     ~SinglePinActor(){
-        this->softwarePin = nullptr;
-        hardwarePin = nullptr;
+        delete softwarePin;
+        delete hardwarePin ;
         Logger::debug("Maybe delete manually at SinglePinActor");
     }
 
@@ -40,7 +40,6 @@ public:
 private:
     ReleasePin* softwarePin = nullptr;
     ReleasePin* hardwarePin = nullptr;
-    //PinCommon* pinCommon = nullptr;
     float direction;
 };
 

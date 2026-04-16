@@ -19,8 +19,14 @@ public:
     ReleasePinHardware(int pinNumber) : ReleasePin(pinNumber, true, "HARDWARE_PIN "){
         if (!gpioInitialised) {
         #ifdef IS_RPI
-            if (gpioInitialise() < 0) {
-                Logger::criticalError("GPIO can not be init");
+            auto errorCode = gpioInitialise();
+            if (errorCode < 0) {
+                Logger::criticalError("GPIO can not be init. Error code: " + std::to_string(errorCode));
+                /*
+                PI_INIT_FAILED (-1) — общая ошибка (часто из-за sudo).
+                PI_BAD_MALLOC_PRIVS (-132) — нет прав на выделение памяти (точно sudo).
+                -70 (PI_CAN_OPEN_PIGPIOD) — интерфейс занят.
+                */
             }
             gpioInitialised = true;
         #endif
