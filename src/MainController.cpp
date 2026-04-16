@@ -47,5 +47,6 @@ void MainController::update(float tpf)
 void MainController::complete()
 {
     gamepadController.complete();
+    buzzerController.complete();
     SDL_Quit();
 }

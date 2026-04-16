@@ -28,7 +28,6 @@ private:
     bool* completeFlagApplicationLevel = nullptr;
     bool completeFlagInputLevel = false;
     int frames = 0;
-    SDL_Gamepad* gamepad = nullptr;
     GamepadController gamepadController;
     BuzzerController buzzerController;
     SDL_Event event;
