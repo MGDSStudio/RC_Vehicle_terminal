@@ -12,6 +12,7 @@ int main(int argc, char* argv[]) {
     SDL_Window* window = nullptr;
     SDL_Renderer* renderer = nullptr;
 
+
     if (!SDL_CreateWindowAndRenderer("SDL3 Hello World", 800, 600, 0, &window, &renderer)) {
         SDL_Log("Couldn't create window/renderer: %s", SDL_GetError());
         SDL_Quit();
