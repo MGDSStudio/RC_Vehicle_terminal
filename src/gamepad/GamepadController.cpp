@@ -4,18 +4,28 @@
 
 #include "GamepadController.h"
 
+#include "../LocalCommandsListenersObserverSingleton.h"
+
 GamepadController::GamepadController() {
     log("Gamepad controller init");
 }
 
+GamepadController::~GamepadController() {
+    complete();
+}
+
+
 void GamepadController::update(float tpf)
 {
-
+    //Logger::debug("Update");
 }
 
 void GamepadController::complete()
 {
-    SDL_CloseGamepad(gamepad);
+    if (gamepad != nullptr) {
+        SDL_CloseGamepad(gamepad);
+        gamepad = nullptr;
+    }
 }
 
 bool GamepadController::attachCommand(SDL_Event* event)
@@ -40,6 +50,7 @@ bool GamepadController::isConnectionEvent(SDL_Event* event)
 
 bool GamepadController::isInputEvent(SDL_Event* event)
 {
+    //auto type = event->type;
     return (event->type == SDL_EVENT_GAMEPAD_BUTTON_DOWN || event->type == SDL_EVENT_GAMEPAD_BUTTON_UP || event->type == SDL_EVENT_GAMEPAD_AXIS_MOTION);
 }
 
@@ -83,6 +94,7 @@ void GamepadController::applyInputEvent(SDL_Event* event)
         updateAxisMoved(event, &local_command);
         break;
     }
+    LocalCommandsListenersObserverSingleton::getInstance().broadcast(local_command);
 }
 
 void GamepadController::updateButtonPressed(SDL_Event* event, LocalCommand* local_command)

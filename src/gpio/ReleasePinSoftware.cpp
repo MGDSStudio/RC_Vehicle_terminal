@@ -12,7 +12,6 @@ void ReleasePinSoftware::setValue(float value)
 
 void ReleasePinSoftware::enable(bool flag)
 {
-    ReleasePinSoftware::enable(flag);
     if (flag) log("high level set");
     else log("low level set");
 }

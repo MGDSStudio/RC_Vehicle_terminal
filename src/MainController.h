@@ -31,6 +31,7 @@ private:
     SDL_Gamepad* gamepad = nullptr;
     GamepadController gamepadController;
     BuzzerController buzzerController;
+    SDL_Event event;
     void close() const
     {
         *this->completeFlagApplicationLevel = true;

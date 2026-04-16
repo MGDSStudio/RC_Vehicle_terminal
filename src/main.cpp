@@ -1,6 +1,4 @@
-#include <SDL3/SDL.h>
-#include <SDL3/SDL_main.h>
-#include <iostream>
+
 #include  "Logger.h"
 #include "MainController.h"
 
@@ -28,7 +26,6 @@ void dispose()
 
 
 /*
- *
 #include <SDL3/SDL.h>
 #include <iostream>
 #include <vector>
@@ -107,7 +104,4 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
-}
-
-
- **/
+*/

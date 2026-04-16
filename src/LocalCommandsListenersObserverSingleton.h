@@ -24,7 +24,7 @@ public:
     }
     void subscribe(LocalCommandsListener* listener);
     void unsubscribe(LocalCommandsListener* listener);
-    void broadcast(LocalCommand &global_command) const;
+    void broadcast(LocalCommand &local_command) const;
 
 private:
     LocalCommandsListenersObserverSingleton();

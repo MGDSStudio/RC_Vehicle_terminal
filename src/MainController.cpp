@@ -8,7 +8,8 @@
 
 MainController::MainController()
 {
-    if (!SDL_Init(SDL_INIT_GAMEPAD | SDL_INIT_JOYSTICK)) {
+    //if (!SDL_Init(SDL_INIT_GAMEPAD | SDL_INIT_JOYSTICK)) {
+    if (!SDL_Init(SDL_INIT_GAMEPAD)) {
         SDL_Log("Ошибка инициализации SDL: %s", SDL_GetError());
         //*this->completeFlagApplicationLevel = true;
     }
@@ -23,7 +24,7 @@ MainController::~MainController()
 
 void MainController::update(float tpf)
 {
-        SDL_Event event;
+
         while (SDL_PollEvent(&event)) {
             if (event.type == SDL_EVENT_QUIT) {
                 close();

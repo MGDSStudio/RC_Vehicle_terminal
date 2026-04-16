@@ -42,8 +42,6 @@ void BuzzerController::update(float tpf) {
 void BuzzerController::onCommandReceived(LocalCommand& global_command){
     if (global_command.getPrefix() == LocalCommandPrefix::NOISE_DIGITAL){
         bool enable = global_command.getBool();
-        //float floatVal = global_command.getFloatValue();
-        //Logger::debug("Float buzzer value is: " + std::to_string(floatVal));
         if (enable){
             buzzer.enable(true);
             Logger::debug("Buzzer enabled from digital command");

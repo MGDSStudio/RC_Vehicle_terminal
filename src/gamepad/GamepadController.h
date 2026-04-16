@@ -19,7 +19,7 @@ class GamepadController : public IUpdateable, InputController
 public:
     GamepadController();
 
-    ~GamepadController() override = default;
+    ~GamepadController() override ;
     void update(float tpf) override;
     void complete() override;
     void updateButtonPressed(SDL_Event* event, LocalCommand* local_command);
