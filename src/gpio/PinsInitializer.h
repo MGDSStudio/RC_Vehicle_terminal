@@ -10,11 +10,20 @@
 
 #include "PinActionName.h"
 #include "../Constants.h"
+#ifdef IS_RPI
+    #include <pigpio.h>
+#endif
 
 class PinsInitializer {
 
 public:
     std::pmr::unordered_map<PinActionName, int>* getPins();
+
+    void complete() {
+    #ifdef IS_RPI
+            gpioTerminate();
+    #endif
+    }
 
 private:
     void init();

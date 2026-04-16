@@ -48,5 +48,7 @@ void MainController::complete()
 {
     gamepadController.complete();
     buzzerController.complete();
+    PinsInitializer pins_initializer;
+    pins_initializer.complete();
     SDL_Quit();
 }
