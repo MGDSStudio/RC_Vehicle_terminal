@@ -1,0 +1,2156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="SDL3"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\build\;CMake Files\build\_deps\;CMake Files\build\_deps\sdl3-src\;CMake Files\build\_deps\sdl3-src\cmake\;CMake Files\build\_deps\sdl3-src\include\;CMake Files\build\_deps\sdl3-src\include\build_config\;CMake Files\build\_deps\sdl3-src\.git\;CMake Files\build\_deps\sdl3-src\.git\refs\;CMake Files\build\_deps\sdl3-src\.git\refs\heads\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SDL3-shared">
+				<Option output="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/libSDL3.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSING_GENERATED_CONFIG_H"/>
+					<Add option="-DSDL_BUILD_MAJOR_VERSION=3"/>
+					<Add option="-DSDL_BUILD_MINOR_VERSION=5"/>
+					<Add option="-DSDL_BUILD_MICRO_VERSION=0"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/include"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/include-config-/build_config"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/include-revision"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/libdrm"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/ibus-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 SDL3-shared"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SDL3-shared/fast">
+				<Option output="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/libSDL3.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSING_GENERATED_CONFIG_H"/>
+					<Add option="-DSDL_BUILD_MAJOR_VERSION=3"/>
+					<Add option="-DSDL_BUILD_MINOR_VERSION=5"/>
+					<Add option="-DSDL_BUILD_MICRO_VERSION=0"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/include"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/include-config-/build_config"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/include-revision"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src"/>
+					<Add directory="/usr/include/fribidi"/>
+					<Add directory="/usr/include/libdrm"/>
+					<Add directory="/usr/include/dbus-1.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/dbus-1.0/include"/>
+					<Add directory="/usr/include/ibus-1.0"/>
+					<Add directory="/usr/include/glib-2.0"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/glib-2.0/include"/>
+					<Add directory="/usr/include/libmount"/>
+					<Add directory="/usr/include/blkid"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 SDL3-shared/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SDL3_test">
+				<Option output="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/libSDL3_test.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/include"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/include-revision"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 SDL3_test"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SDL3_test/fast">
+				<Option output="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/libSDL3_test.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/include"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/include-revision"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 SDL3_test/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SDL_uclibc">
+				<Option output="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/libSDL_uclibc.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSING_GENERATED_CONFIG_H"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/include"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/include-config-/build_config"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 SDL_uclibc"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="SDL_uclibc/fast">
+				<Option output="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/libSDL_uclibc.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DUSING_GENERATED_CONFIG_H"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/include"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/include-config-/build_config"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src"/>
+					<Add directory="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include"/>
+					<Add directory="/usr/include/c++/13"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/13"/>
+					<Add directory="/usr/include/c++/13/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/13/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 SDL_uclibc/fast"/>
+					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/cmake_pch.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir/cmake_pch.h.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/include-revision/SDL3/SDL_revision.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_assert.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_asyncio.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_atomic.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_audio.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_begin_code.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_bits.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_blendmode.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_camera.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_clipboard.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_close_code.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_copying.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_cpuinfo.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_dialog.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_dlopennote.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_egl.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_endian.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_error.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_events.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_filesystem.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_gamepad.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_gpu.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_guid.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_haptic.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_hidapi.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_hints.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_init.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_intrin.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_iostream.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_joystick.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_keyboard.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_keycode.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_loadso.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_locale.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_log.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_main.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_main_impl.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_messagebox.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_metal.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_misc.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_mouse.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_mutex.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_oldnames.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_opengl.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_opengl_glext.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_opengles.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_opengles2.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_opengles2_gl2.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_opengles2_gl2ext.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_opengles2_gl2platform.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_opengles2_khrplatform.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_openxr.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_pen.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_pixels.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_platform.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_platform_defines.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_power.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_process.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_properties.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_rect.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_render.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_scancode.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_sensor.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_stdinc.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_storage.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_surface.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_system.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_thread.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_time.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_timer.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_touch.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_tray.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_version.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_video.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/SDL3/SDL_vulkan.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_assert.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_assert_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_error.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_error_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_guid.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_hashtable.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_hashtable.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_hints.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_hints_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_internal.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_list.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_list.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_log.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_log_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_menu.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_properties.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_properties_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_utils.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/SDL_utils_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/atomic/SDL_atomic.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/atomic/SDL_spinlock.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_audio.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_audio_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_audio_channel_converters.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_audiocvt.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_audiodev.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_audiodev_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_audioqueue.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_audioqueue.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_audioresample.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_audioresample.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_audiotypecvt.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_mixer.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_sysaudio.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_wave.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/SDL_wave.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/alsa/SDL_alsa_audio.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/alsa/SDL_alsa_audio.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/disk/SDL_diskaudio.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/disk/SDL_diskaudio.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/dummy/SDL_dummyaudio.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/dummy/SDL_dummyaudio.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/jack/SDL_jackaudio.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/jack/SDL_jackaudio.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/pulseaudio/SDL_pulseaudio.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/pulseaudio/SDL_pulseaudio.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/sndio/SDL_sndioaudio.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/audio/sndio/SDL_sndioaudio.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/camera/SDL_camera.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/camera/SDL_camera_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/camera/SDL_syscamera.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/camera/dummy/SDL_camera_dummy.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/camera/v4l2/SDL_camera_v4l2.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/SDL_core_unsupported.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/SDL_core_unsupported.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_dbus.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_dbus.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_evdev.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_evdev.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_evdev_capabilities.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_evdev_capabilities.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_evdev_kbd.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_evdev_kbd.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_fcitx.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_fcitx.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_ibus.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_ibus.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_ime.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_ime.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_progressbar.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_progressbar.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_system_theme.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_system_theme.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_threadprio.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_udev.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/linux/SDL_udev.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/unix/SDL_appid.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/unix/SDL_appid.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/unix/SDL_fribidi.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/unix/SDL_fribidi.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/unix/SDL_libthai.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/unix/SDL_libthai.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/unix/SDL_poll.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/core/unix/SDL_poll.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/cpuinfo/SDL_cpuinfo.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/cpuinfo/SDL_cpuinfo_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dialog/SDL_dialog.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dialog/SDL_dialog.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dialog/SDL_dialog_utils.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dialog/SDL_dialog_utils.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dialog/unix/SDL_portaldialog.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dialog/unix/SDL_portaldialog.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dialog/unix/SDL_unixdialog.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dialog/unix/SDL_zenitydialog.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dialog/unix/SDL_zenitydialog.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dialog/unix/SDL_zenitymessagebox.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dialog/unix/SDL_zenitymessagebox.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dynapi/SDL_dynapi.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dynapi/SDL_dynapi.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dynapi/SDL_dynapi_overrides.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dynapi/SDL_dynapi_procs.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/dynapi/SDL_dynapi_unsupported.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_categories.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_categories_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_clipboardevents.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_clipboardevents_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_displayevents.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_displayevents_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_dropevents.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_dropevents_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_events.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_events_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_eventwatch.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_eventwatch_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_keyboard.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_keyboard_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_keymap.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_keymap_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_keysym_to_keycode.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_keysym_to_keycode_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_keysym_to_scancode.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_keysym_to_scancode_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_mouse.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_mouse_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_pen.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_pen_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_quit.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_scancode_tables.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_scancode_tables_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_touch.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_touch_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_windowevents.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/SDL_windowevents_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/blank_cursor.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/default_cursor.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/imKStoUCS.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/imKStoUCS.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/scancodes_darwin.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/scancodes_linux.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/scancodes_windows.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/events/scancodes_xfree86.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/filesystem/SDL_filesystem.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/filesystem/SDL_filesystem_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/filesystem/SDL_sysfilesystem.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/filesystem/posix/SDL_sysfsops.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/filesystem/unix/SDL_sysfilesystem.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/gpu/SDL_gpu.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/gpu/SDL_sysgpu.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/gpu/vulkan/SDL_gpu_vulkan.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/gpu/vulkan/SDL_gpu_vulkan_vkfuncs.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/gpu/xr/SDL_gpu_openxr.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/gpu/xr/SDL_gpu_openxr.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/gpu/xr/SDL_openxr_internal.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/gpu/xr/SDL_openxrdyn.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/gpu/xr/SDL_openxrdyn.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/gpu/xr/SDL_openxrsym.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/haptic/SDL_haptic.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/haptic/SDL_haptic_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/haptic/SDL_syshaptic.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/haptic/hidapi/SDL_hidapihaptic.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/haptic/hidapi/SDL_hidapihaptic.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/haptic/hidapi/SDL_hidapihaptic_lg4ff.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/haptic/linux/SDL_syshaptic.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/hidapi/SDL_hidapi.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/hidapi/SDL_hidapi_android.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/hidapi/SDL_hidapi_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/hidapi/SDL_hidapi_ios.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/hidapi/SDL_hidapi_libusb.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/hidapi/SDL_hidapi_linux.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/hidapi/SDL_hidapi_mac.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/hidapi/SDL_hidapi_netbsd.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/hidapi/SDL_hidapi_steamxbox.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/hidapi/SDL_hidapi_windows.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/io/SDL_asyncio.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/io/SDL_asyncio_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/io/SDL_iostream.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/io/SDL_iostream_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/io/SDL_sysasyncio.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/io/generic/SDL_asyncio_generic.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/SDL_gamepad.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/SDL_gamepad_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/SDL_gamepad_db.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/SDL_joystick.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/SDL_joystick_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/SDL_steam_virtual_gamepad.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/SDL_steam_virtual_gamepad.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/SDL_sysjoystick.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/controller_list.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/controller_type.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/controller_type.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_8bitdo.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_combined.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_flydigi.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_flydigi.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_gamecube.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_gamesir.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_gip.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_lg4ff.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_luna.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_ps3.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_ps4.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_ps5.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_rumble.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_rumble.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_shield.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_sinput.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_sinput.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_stadia.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_steam.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_steam_hori.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_steam_triton.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_steamdeck.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_switch.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_switch2.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_wii.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_xbox360.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_xbox360.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_xbox360w.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_xboxone.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapi_zuiki.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_hidapijoystick.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_report_descriptor.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/hidapi/SDL_report_descriptor.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/linux/SDL_sysjoystick.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/linux/SDL_sysjoystick_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/usb_ids.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/virtual/SDL_virtualjoystick.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/joystick/virtual/SDL_virtualjoystick_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/e_atan2.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/e_exp.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/e_fmod.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/e_log.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/e_log10.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/e_pow.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/e_rem_pio2.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/e_sqrt.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/k_cos.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/k_rem_pio2.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/k_sin.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/k_tan.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_atan.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_copysign.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_cos.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_fabs.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_floor.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_isinf.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_isinff.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_isnan.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_isnanf.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_modf.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_scalbn.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_sin.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/libm/s_tan.c">
+			<Option target="SDL_uclibc"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/loadso/dlopen/SDL_sysloadso.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/locale/SDL_locale.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/locale/SDL_syslocale.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/locale/unix/SDL_syslocale.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/main/SDL_main_callbacks.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/main/SDL_main_callbacks.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/main/SDL_runapp.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/main/generic/SDL_sysmain_callbacks.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/misc/SDL_libusb.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/misc/SDL_libusb.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/misc/SDL_sysurl.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/misc/SDL_url.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/misc/unix/SDL_sysurl.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/power/SDL_power.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/power/SDL_syspower.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/power/linux/SDL_syspower.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/process/SDL_process.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/process/posix/SDL_posixprocess.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/SDL_d3dmath.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/SDL_render.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/SDL_render_debug_font.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/SDL_render_unsupported.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/SDL_sysrender.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/SDL_yuv_sw.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/SDL_yuv_sw_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d/D3D9_PixelShader_Palette.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d/D3D9_PixelShader_Palette_Linear.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d/D3D9_PixelShader_Palette_Nearest.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d/D3D9_PixelShader_YUV.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d/SDL_render_d3d.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d/SDL_shaders_d3d.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d/SDL_shaders_d3d.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d11/D3D11_PixelShader_Advanced.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d11/D3D11_PixelShader_Colors.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d11/D3D11_PixelShader_Textures.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d11/D3D11_VertexShader.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d11/SDL_render_d3d11.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d11/SDL_shaders_d3d11.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d11/SDL_shaders_d3d11.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/D3D12_PixelShader_Advanced.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/D3D12_PixelShader_Colors.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/D3D12_PixelShader_Textures.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/D3D12_RootSig_Advanced.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/D3D12_RootSig_Color.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/D3D12_RootSig_Texture.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/D3D12_VertexShader_Advanced.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/D3D12_VertexShader_Color.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/D3D12_VertexShader_Texture.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/SDL_render_d3d12.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/SDL_render_d3d12_xbox.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/SDL_shaders_d3d12.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/direct3d12/SDL_shaders_d3d12.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/gpu/SDL_gpu_util.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/gpu/SDL_pipeline_gpu.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/gpu/SDL_pipeline_gpu.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/gpu/SDL_render_gpu.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/gpu/SDL_shaders_gpu.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/gpu/SDL_shaders_gpu.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/metal/SDL_shaders_metal_ios.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/metal/SDL_shaders_metal_iphonesimulator.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/metal/SDL_shaders_metal_macos.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/metal/SDL_shaders_metal_tvos.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/metal/SDL_shaders_metal_tvsimulator.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/ngage/SDL_render_ngage.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/ngage/SDL_render_ngage_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/opengl/SDL_glfuncs.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/opengl/SDL_render_gl.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/opengl/SDL_shaders_gl.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/opengl/SDL_shaders_gl.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/opengles2/SDL_gles2funcs.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/opengles2/SDL_render_gles2.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/opengles2/SDL_shaders_gles2.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/opengles2/SDL_shaders_gles2.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/ps2/SDL_render_ps2.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/psp/SDL_render_psp.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/psp/SDL_render_psp_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_blendfillrect.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_blendfillrect.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_blendline.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_blendline.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_blendpoint.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_blendpoint.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_draw.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_drawline.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_drawline.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_drawpoint.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_drawpoint.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_render_sw.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_render_sw_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_triangle.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/software/SDL_triangle.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vitagxm/SDL_render_vita_gxm.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vitagxm/SDL_render_vita_gxm_memory.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vitagxm/SDL_render_vita_gxm_memory.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vitagxm/SDL_render_vita_gxm_shaders.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vitagxm/SDL_render_vita_gxm_tools.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vitagxm/SDL_render_vita_gxm_tools.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vitagxm/SDL_render_vita_gxm_types.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vulkan/SDL_render_vulkan.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vulkan/SDL_shaders_vulkan.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vulkan/SDL_shaders_vulkan.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vulkan/VULKAN_PixelShader_Advanced.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vulkan/VULKAN_PixelShader_Colors.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vulkan/VULKAN_PixelShader_Textures.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/render/vulkan/VULKAN_VertexShader.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/sensor/SDL_sensor.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/sensor/SDL_sensor_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/sensor/SDL_syssensor.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/sensor/dummy/SDL_dummysensor.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/sensor/dummy/SDL_dummysensor.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_casefolding.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_crc16.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_crc32.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_getenv.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_getenv_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_iconv.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_malloc.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_memcpy.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_memmove.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_memset.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_mslibc.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_murmur3.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_qsort.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_random.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_stdlib.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_string.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_strtokr.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_sysstdlib.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/stdlib/SDL_vacopy.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/storage/SDL_storage.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/storage/SDL_sysstorage.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/storage/generic/SDL_genericstorage.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/storage/steam/SDL_steamstorage.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/storage/steam/SDL_steamstorage_proc.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/test/SDL_test_assert.c">
+			<Option target="SDL3_test"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/test/SDL_test_common.c">
+			<Option target="SDL3_test"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/test/SDL_test_compare.c">
+			<Option target="SDL3_test"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/test/SDL_test_crc32.c">
+			<Option target="SDL3_test"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/test/SDL_test_font.c">
+			<Option target="SDL3_test"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/test/SDL_test_fuzzer.c">
+			<Option target="SDL3_test"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/test/SDL_test_harness.c">
+			<Option target="SDL3_test"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/test/SDL_test_internal.h">
+			<Option target="SDL3_test"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/test/SDL_test_log.c">
+			<Option target="SDL3_test"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/test/SDL_test_md5.c">
+			<Option target="SDL3_test"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/test/SDL_test_memory.c">
+			<Option target="SDL3_test"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/thread/SDL_systhread.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/thread/SDL_thread.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/thread/SDL_thread_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/thread/pthread/SDL_syscond.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/thread/pthread/SDL_sysmutex.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/thread/pthread/SDL_sysrwlock.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/thread/pthread/SDL_syssem.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/thread/pthread/SDL_systhread.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/thread/pthread/SDL_systls.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/time/SDL_time.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/time/SDL_time_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/time/unix/SDL_systime.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/timer/SDL_timer.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/timer/SDL_timer_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/timer/unix/SDL_systimer.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/tray/SDL_tray_utils.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/tray/SDL_tray_utils.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/tray/unix/SDL_dbustray.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/tray/unix/SDL_tray.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/tray/unix/SDL_unixtray.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_RLEaccel.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_RLEaccel_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_blit.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_blit.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_blit_0.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_blit_1.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_blit_A.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_blit_N.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_blit_auto.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_blit_auto.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_blit_copy.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_blit_copy.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_blit_slow.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_blit_slow.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_bmp.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_clipboard.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_clipboard_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_egl.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_egl_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_fillrect.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_pixels.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_pixels_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_rect.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_rect_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_rect_impl.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_rotate.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_rotate.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_stb.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_stb_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_stretch.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_surface.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_surface_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_sysvideo.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_video.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_video_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_video_unsupported.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_video_unsupported.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_vulkan_internal.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_vulkan_utils.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_yuv.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/SDL_yuv_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/dummy/SDL_nullevents.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/dummy/SDL_nullevents_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/dummy/SDL_nullframebuffer.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/dummy/SDL_nullframebuffer_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/dummy/SDL_nullvideo.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/dummy/SDL_nullvideo.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/kmsdrm/SDL_kmsdrmdyn.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/kmsdrm/SDL_kmsdrmdyn.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/kmsdrm/SDL_kmsdrmevents.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/kmsdrm/SDL_kmsdrmevents.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/kmsdrm/SDL_kmsdrmmouse.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/kmsdrm/SDL_kmsdrmmouse.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/kmsdrm/SDL_kmsdrmopengles.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/kmsdrm/SDL_kmsdrmopengles.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/kmsdrm/SDL_kmsdrmvideo.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/kmsdrm/SDL_kmsdrmvideo.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/kmsdrm/SDL_kmsdrmvulkan.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/kmsdrm/SDL_kmsdrmvulkan.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/miniz.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/offscreen/SDL_offscreenevents.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/offscreen/SDL_offscreenevents_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/offscreen/SDL_offscreenframebuffer.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/offscreen/SDL_offscreenframebuffer_c.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/offscreen/SDL_offscreenopengles.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/offscreen/SDL_offscreenopengles.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/offscreen/SDL_offscreenvideo.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/offscreen/SDL_offscreenvideo.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/offscreen/SDL_offscreenvulkan.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/offscreen/SDL_offscreenvulkan.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/offscreen/SDL_offscreenwindow.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/offscreen/SDL_offscreenwindow.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/stb_image.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11clipboard.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11clipboard.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11dyn.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11dyn.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11events.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11events.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11framebuffer.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11framebuffer.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11keyboard.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11keyboard.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11messagebox.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11messagebox.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11modes.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11modes.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11mouse.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11mouse.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11opengl.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11opengl.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11opengles.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11opengles.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11pen.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11pen.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11settings.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11settings.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11shape.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11shape.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11toolkit.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11toolkit.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11touch.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11touch.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11video.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11video.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11vulkan.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11vulkan.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11window.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11window.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11xfixes.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11xfixes.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11xinput2.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11xinput2.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11xsync.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11xsync.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11xtest.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/SDL_x11xtest.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/edid-parse.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/xsettings-client.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/x11/xsettings-client.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/yuv2rgb/yuv_rgb.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/yuv2rgb/yuv_rgb_common.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/yuv2rgb/yuv_rgb_internal.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/yuv2rgb/yuv_rgb_lsx.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/yuv2rgb/yuv_rgb_lsx.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/yuv2rgb/yuv_rgb_lsx_func.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/yuv2rgb/yuv_rgb_sse.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/yuv2rgb/yuv_rgb_sse.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/yuv2rgb/yuv_rgb_sse_func.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/yuv2rgb/yuv_rgb_std.c">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/yuv2rgb/yuv_rgb_std.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/src/video/yuv2rgb/yuv_rgb_std_func.h">
+			<Option target="SDL3-shared"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/3rdparty.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/FindLibUSB.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/GetGitRevisionDescription.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/GetGitRevisionDescription.cmake.in">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/PreseedEmscriptenCache.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/PreseedMSVCCache.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/PreseedNokiaNGageCache.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/SDL3Config.cmake.in">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/macros.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/sdlchecks.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/sdlcommands.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/sdlcompilers.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/sdlcpu.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/sdlmanpages.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/cmake/sdlplatform.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\cmake\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/build_config/SDL_build_config.h.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\include\build_config\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/include/build_config/SDL_revision.h.cmake">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\include\build_config\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/.git/HEAD">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\.git\"/>
+		</Unit>
+		<Unit filename="/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-src/.git/refs/heads/main">
+			<Option virtualFolder="CMake Files\build\_deps\sdl3-src\.git\refs\heads\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

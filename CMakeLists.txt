@@ -3,17 +3,12 @@ project(RC_Vehicle_terminal)
 
 set(CMAKE_CXX_STANDARD 17)
 
+# 1. Вместо FetchContent ищем установленную в системе библиотеку
+# На Raspberry Pi: sudo apt install libsdl3-dev (если доступно)
+# Или соберите/установите её один раз вручную: make install
+find_package(SDL3 REQUIRED)
 
-
-# 1. Fetch SDL3 from GitHub
 include_directories(include)
-include(FetchContent)
-FetchContent_Declare(
-        SDL3
-        GIT_REPOSITORY https://github.com/libsdl-org/SDL
-        GIT_TAG main
-)
-FetchContent_MakeAvailable(SDL3)
 
 if(EXISTS "/proc/device-tree/model")
     file(READ "/proc/device-tree/model" DEVICE_MODEL)
@@ -22,33 +17,17 @@ if(EXISTS "/proc/device-tree/model")
     endif()
 endif()
 
+# Убираем GLOB_RECURSE, если файлы перечислены ниже вручную,
+# чтобы избежать дублирования и лишнего потребления памяти
 file(GLOB_RECURSE SOURCES
         "src/*.cpp"
         "src/*.h"
         "src/*.hpp"
 )
 
-# Используем переменную SOURCES вместо перечисления файлов
-add_executable(RC_Vehicle_terminal ${SOURCES}
-        src/MainController.cpp
-        src/MainController.h
-        src/gamepad/GamepadController.cpp
-        src/gamepad/GamepadController.h
-        src/gamepad/KeyboardController.cpp
-        src/gamepad/KeyboardController.h
-        src/gamepad/InputController.h
-        src/gamepad/KeyboardDataStruct.cpp
-        src/gamepad/KeyboardDataStruct.h
-        src/gpio/ReleasePin.h
-        src/gpio/ReleasePinHardware.cpp
-        src/gpio/ReleasePinHardware.h
-        src/gpio/ReleasePinSoftware.cpp
-        src/gpio/ReleasePinSoftware.h)
+add_executable(RC_Vehicle_terminal ${SOURCES})
 
-
-
-# 3. Link SDL3
-# SDL3 provides a unified target: SDL3::SDL3
+# 3. Привязываем найденную в системе SDL3
 target_link_libraries(RC_Vehicle_terminal PRIVATE SDL3::SDL3)
 
 add_custom_command(TARGET RC_Vehicle_terminal POST_BUILD
@@ -60,18 +39,16 @@ add_custom_command(TARGET RC_Vehicle_terminal POST_BUILD
 
 if(IS_RPI)
     message(STATUS "Configuring for Raspberry Pi...")
-    # Ищем pigpio (она должна быть установлена в системе: sudo apt install pigpio)
     find_library(PIGPIO_LIB pigpio)
     if(PIGPIO_LIB)
-        target_link_libraries(main PRIVATE ${PIGPIO_LIB} pthread rt)
-        # Добавляем макрос для кода, чтобы можно было использовать #ifdef RPI_BUILD
-        target_compile_definitions(main PRIVATE RPI_BUILD)
+        # ВНИМАНИЕ: Исправлено имя цели с 'main' на 'RC_Vehicle_terminal'
+        target_link_libraries(RC_Vehicle_terminal PRIVATE ${PIGPIO_LIB} pthread rt)
+        target_compile_definitions(RC_Vehicle_terminal PRIVATE RPI_BUILD IS_RPI)
     else()
-        message(WARNING "pigpio not found! GPIO features might not work.")
+        message(WARNING "pigpio not found!")
     endif()
 endif()
 
-# 4. Copy DLL to output folder (Windows only)
 if(WIN32)
     add_custom_command(TARGET RC_Vehicle_terminal POST_BUILD
             COMMAND ${CMAKE_COMMAND} -E copy_if_different

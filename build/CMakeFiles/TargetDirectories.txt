@@ -1,0 +1,8 @@
+/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/CMakeFiles/RC_Vehicle_terminal.dir
+/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/CMakeFiles/edit_cache.dir
+/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/CMakeFiles/rebuild_cache.dir
+/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/CMakeFiles/SDL3-shared.dir
+/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/CMakeFiles/SDL3_test.dir
+/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/CMakeFiles/SDL_uclibc.dir
+/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/CMakeFiles/edit_cache.dir
+/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-build/CMakeFiles/rebuild_cache.dir

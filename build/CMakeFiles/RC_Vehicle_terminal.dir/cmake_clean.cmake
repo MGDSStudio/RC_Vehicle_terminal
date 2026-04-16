@@ -1,0 +1,43 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/BuzzerController.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/BuzzerController.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/LocalCommand.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/LocalCommand.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/LocalCommandsListener.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/LocalCommandsListener.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/LocalCommandsListenersObserverSingleton.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/LocalCommandsListenersObserverSingleton.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/MainController.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/MainController.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gamepad/GamepadController.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gamepad/GamepadController.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gamepad/GamepadDataStruct.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gamepad/GamepadDataStruct.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gamepad/KeyboardController.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gamepad/KeyboardController.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gamepad/KeyboardDataStruct.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gamepad/KeyboardDataStruct.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gpio/PinCommon.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gpio/PinCommon.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gpio/PinsInitializer.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gpio/PinsInitializer.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gpio/ReleasePinHardware.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gpio/ReleasePinHardware.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gpio/ReleasePinSoftware.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gpio/ReleasePinSoftware.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gpio/SinglePinActor.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gpio/SinglePinActor.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gpio/SoftwarePin.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/gpio/SoftwarePin.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/main.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/main.cpp.o.d"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/preferences/PreferencesLoader.cpp.o"
+  "CMakeFiles/RC_Vehicle_terminal.dir/src/preferences/PreferencesLoader.cpp.o.d"
+  "RC_Vehicle_terminal"
+  "RC_Vehicle_terminal.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/RC_Vehicle_terminal.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

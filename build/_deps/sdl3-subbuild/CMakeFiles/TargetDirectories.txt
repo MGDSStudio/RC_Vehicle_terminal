@@ -1,0 +1,3 @@
+/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-subbuild/CMakeFiles/sdl3-populate.dir
+/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-subbuild/CMakeFiles/edit_cache.dir
+/home/mgdsstudio/Embedded/Programming/RC_Vehicle_terminal/build/_deps/sdl3-subbuild/CMakeFiles/rebuild_cache.dir
