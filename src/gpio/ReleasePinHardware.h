@@ -5,15 +5,27 @@
 #ifndef RC_VEHICLE_TERMINAL_RELEASEPINHARDWARE_H
 #define RC_VEHICLE_TERMINAL_RELEASEPINHARDWARE_H
 #include "ReleasePin.h"
+#include "../Logger.h"
+
 #ifdef IS_RPI
     #include <pigpio.h>
 #endif
 
+static bool gpioInitialised = false;
 
 class ReleasePinHardware : public ReleasePin
 {
 public:
     ReleasePinHardware(int pinNumber) : ReleasePin(pinNumber, true, "HARDWARE_PIN "){
+        if (!gpioInitialised) {
+        #ifdef IS_RPI
+            if (gpioInitialise() < 0) {
+                Logger::criticalError("GPIO can not be init");
+            }
+            gpioInitialised = true;
+        #endif
+        }
+
     }
     ~ReleasePinHardware() override = default;
     void setValue(float value) override;

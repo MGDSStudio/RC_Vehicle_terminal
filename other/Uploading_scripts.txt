@@ -1,7 +1,15 @@
 
 
 
-rm -rf RC_Vehicle_terminal && mkdir RC_Vehicle_terminal && git clone https://github.com/MGDSStudio/RC_Vehicle_terminal.git RC_Vehicle_terminal && cd RC_Vehicle_terminal && mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build . -j 1
+rm -rf RC_Vehicle_terminal &&
+mkdir RC_Vehicle_terminal &&
+git clone https://github.com/MGDSStudio/RC_Vehicle_terminal.git RC_Vehicle_terminal &&
+cd RC_Vehicle_terminal &&
+mkdir build && cd build &&
+cmake -DCMAKE_BUILD_TYPE=Release .. &&
+ cmake --build . -j 1
+
+
 cd bin
 sudo ./main >output.txt
 
@@ -19,3 +27,8 @@ cmake --build . -j 1
 cd RC_Vehicle_terminal && cd build && cmake -DCMAKE_BUILD_TYPE=Release .. && make -j2
 
 cd RC_Vehicle_terminal && cd build && cd bin && sudo ./main
+
+rm -rf RC_Vehicle_terminal &&
+mkdir RC_Vehicle_terminal &&
+git clone https://github.com/MGDSStudio/RC_Vehicle_terminal.git RC_Vehicle_terminal
+&& cd RC_Vehicle_terminal && mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build . -j 1
