@@ -23,10 +23,10 @@ void ReleasePinHardware::enable(bool flag)
     #ifdef IS_RPI
         if (flag){
             gpioWrite(pinNumber, ENABLE_PIN);
-            gpioPWM(4, 64);
-            gpioPWM(6, 64);
-            gpioPWM(27, 64);
-            gpioPWM(20, 64);
+            gpioPWM(4, 200);
+            gpioPWM(6, 200);
+            gpioPWM(27, 200);
+            gpioPWM(20, 200);
             /*
             gpioWrite(4, ENABLE_PIN);
             gpioWrite(6, ENABLE_PIN);
