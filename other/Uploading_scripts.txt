@@ -1,0 +1,21 @@
+
+
+
+rm -rf Vehicle_controller && mkdir Vehicle_controller && git clone https://github.com/MGDSStudio/RC_Vehicle_terminal.git RC_Vehicle_terminal && cd RC_Vehicle_terminal && mkdir build && cd build && cmake -DCMAKE_BUILD_TYPE=Release .. && cmake --build . -j 1
+cd bin
+sudo ./main >output.txt
+
+#cmake .. &&  make -j2
+#The next lines are called after a fail
+cd Vehicle_controller && cd build && cmake -DCMAKE_BUILD_TYPE=Release .. && make -j2
+
+
+#cmake -DCMAKE_BUILD_TYPE=Release ..
+
+#cmake ..
+cmake --build . -j 1
+
+
+cd RC_Vehicle_terminal && cd build && cmake -DCMAKE_BUILD_TYPE=Release .. && make -j2
+
+cd Vehicle_controller && cd build && cd bin && sudo ./main

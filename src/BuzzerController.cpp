@@ -20,16 +20,19 @@ void BuzzerController::init() {
     PinsInitializer pins_initializer;
     std::pmr::unordered_map<PinActionName, int> *map = pins_initializer.getPins();
     auto buzzerPin = map->at(PinActionName::BUZZER);
-    Logger::debug("buzzer pin at: " + std::to_string(buzzerPin) + " init successfully");
+
     bool enableSoftwarePin = true;
+    std::string enabled = "disabled";
     #ifdef IS_RPI
         enableSoftwarePin = false;
+        enabled = "enabled";
     #endif
+    Logger::debug("buzzer pin at: " + std::to_string(buzzerPin) + " init successfully. Hardware enabled: " + enabled);
     this->buzzer.setHardwarePin(new ReleasePinHardware(buzzerPin));
     if (!enableSoftwarePin) buzzerPin = -1;
     this->buzzer.setSoftwarePin(new ReleasePinSoftware(buzzerPin));
+    //LocalCommandsListenersObserverSingleton::getInstance().subscribe(this);
 
-    LocalCommandsListenersObserverSingleton::getInstance().subscribe(this);
 }
 
 void BuzzerController::update(float tpf) {

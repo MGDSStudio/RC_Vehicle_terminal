@@ -6,30 +6,29 @@
 #ifndef CMAKESFMLPROJECT_MOVEMENTCONTROLLER_H
 #define CMAKESFMLPROJECT_MOVEMENTCONTROLLER_H
 
+#include "../src/LocalCommandsListener.h"
+#include "../src/IUpdateable.h"
+#include "../src/gpio/SinglePinActor.h"
+//#include "WheelActor.h"
+//#include "WheelSignalsCalculator.h"
+#include "../src/gpio/SoftwarePin.h"
 
-#include "GlobalCommandsListener.h"
-#include "IUpdateable.h"
-#include "gpio/SinglePinActor.h"
-#include "WheelActor.h"
-#include "WheelSignalsCalculator.h"
-#include "gpio/SoftwarePin.h"
-
-class MovementController : public IUpdateable, GlobalCommandsListener{
+class MovementController : public IUpdateable, LocalCommandsListener{
 
 public:
     MovementController();
     ~MovementController();
     void update(float tpf) override;
     void complete() override;
-    void onCommandReceived(GlobalCommand& global_command) override;
+    void onCommandReceived(LocalCommand& global_command) override;
 
 
 private:
-    WheelActor wheelForwardLeft;
+    /*WheelActor wheelForwardLeft;
     WheelActor wheelForwardRight;
     WheelActor wheelBackwardLeft;
     WheelActor wheelBackwardRight;
-    WheelSignalsCalculator* wheelSignalsCalculator;
+    WheelSignalsCalculator* wheelSignalsCalculator;*/
     inline static const float DEAD_ZONE_MIN = -0.075;
     inline static const float DEAD_ZONE_MAX = 0.075;
 

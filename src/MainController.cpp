@@ -33,6 +33,7 @@ void MainController::update(float tpf)
             }
         }
         gamepadController.update(1);
+        buzzerController.update(1);
         if (this->completeFlagInputLevel == true)
         {
             close();

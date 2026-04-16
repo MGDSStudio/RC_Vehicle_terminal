@@ -13,7 +13,7 @@
 class ReleasePinHardware : public ReleasePin
 {
 public:
-    ReleasePinHardware(int pinNumber) : ReleasePin(pinNumber, true, DEBUG_TEXT_PREFIX + std::to_string(pinNumber)){
+    ReleasePinHardware(int pinNumber) : ReleasePin(pinNumber, true, DEBUG_TEXT_PREFIX){
     }
     ~ReleasePinHardware() override = default;
     void setValue(float value) override;

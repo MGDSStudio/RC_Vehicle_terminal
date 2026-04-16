@@ -2,10 +2,10 @@
 // Created by Alexander on 09.04.2026.
 //
 
-#include "MovementController.h"
+#include "../src/MovementController.h"
 
-#include "GlobalCommandsListenersObserverSingleton.h"
-#include "gpio/PinsInitializer.h"
+#include "../src/LocalCommandsListenersObserverSingleton.h"
+#include "../src/gpio/PinsInitializer.h"
 
 MovementController::MovementController() {
     PinsInitializer pins_initializer;
