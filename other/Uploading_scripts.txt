@@ -11,7 +11,7 @@ cmake -DCMAKE_BUILD_TYPE=Release .. &&
 
 
 cd bin
-sudo ./main >output.txt
+sudo ./RC_Vehicle_terminal
 
 #cmake .. &&  make -j2
 #The next lines are called after a fail

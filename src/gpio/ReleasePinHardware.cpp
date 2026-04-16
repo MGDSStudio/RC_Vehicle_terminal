@@ -22,11 +22,13 @@ void ReleasePinHardware::enable(bool flag)
 {
     #ifdef IS_RPI
         if (flag){
-            gpioPWM(pinNumber, ENABLED_PWM_VALUE);
+            gpioWrite(pinNumber, PI_HIGH);
+            //gpioPWM(pinNumber, ENABLED_PWM_VALUE);
             log("high level set");
         }
         else {
-            gpioPWM(pinNumber, DISABLED_PWM_VALUE);
+            gpioWrite(pinNumber, PI_LOW);
+            //gpioPWM(pinNumber, DISABLED_PWM_VALUE);
             log("low level set");
         }
     #endif
