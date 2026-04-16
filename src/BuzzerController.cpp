@@ -31,7 +31,7 @@ void BuzzerController::init() {
     this->buzzer.setHardwarePin(new ReleasePinHardware(buzzerPin));
     if (!enableSoftwarePin) buzzerPin = -1;
     this->buzzer.setSoftwarePin(new ReleasePinSoftware(buzzerPin));
-    //LocalCommandsListenersObserverSingleton::getInstance().subscribe(this);
+    LocalCommandsListenersObserverSingleton::getInstance().subscribe(this);
 
 }
 

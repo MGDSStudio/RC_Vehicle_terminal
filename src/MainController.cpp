@@ -8,16 +8,17 @@
 
 MainController::MainController()
 {
+    if (!SDL_Init(SDL_INIT_GAMEPAD | SDL_INIT_JOYSTICK)) {
+        SDL_Log("Ошибка инициализации SDL: %s", SDL_GetError());
+        //*this->completeFlagApplicationLevel = true;
+    }
+    std::cout << "Поиск геймпадов... Нажмите Ctrl+C для выхода." << std::endl;
     gamepadController.attachCompletionFlagData(&completeFlagInputLevel);
 }
 
 MainController::~MainController()
 {
-    if (!SDL_Init(SDL_INIT_GAMEPAD | SDL_INIT_JOYSTICK)) {
-        SDL_Log("Ошибка инициализации SDL: %s", SDL_GetError());
-        *this->completeFlagApplicationLevel = true;
-    }
-    std::cout << "Поиск геймпадов... Нажмите Ctrl+C для выхода." << std::endl;
+    delete completeFlagApplicationLevel;
 }
 
 void MainController::update(float tpf)

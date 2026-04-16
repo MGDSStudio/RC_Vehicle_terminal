@@ -4,17 +4,19 @@
 
 #include "GamepadController.h"
 
+GamepadController::GamepadController() {
+    log("Gamepad controller init");
+}
 
 void GamepadController::update(float tpf)
 {
+
 }
 
 void GamepadController::complete()
 {
     SDL_CloseGamepad(gamepad);
 }
-
-
 
 bool GamepadController::attachCommand(SDL_Event* event)
 {

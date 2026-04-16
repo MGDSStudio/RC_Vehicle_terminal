@@ -17,6 +17,8 @@
 class GamepadController : public IUpdateable, InputController
 {
 public:
+    GamepadController();
+
     ~GamepadController() override = default;
     void update(float tpf) override;
     void complete() override;
