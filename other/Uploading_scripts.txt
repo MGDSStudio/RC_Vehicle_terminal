@@ -1,7 +1,5 @@
 sudo systemctl stop pigpiod
-sudo rm -f /var/run/pigpio.pid
-sudo ./RC_Vehicle_terminal
-
+sudo rm -f /var/run/pigpio.pid &&
 cd RC_Vehicle_terminal &&
 git pull &&
 cd build &&
