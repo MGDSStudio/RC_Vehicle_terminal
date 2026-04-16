@@ -14,7 +14,7 @@ public:
     ReleasePin(int pinNumber, bool debug, std::string prefix){
         this->pinNumber = pinNumber;
         this->debug = debug;
-        this->debugPrefixName = (prefix +  + ": ");
+        this->debugPrefixName = (prefix +  + ": " + std::to_string(pinNumber));
     }
     virtual ~ReleasePin() = default;
     virtual void setValue(float value) = 0;
