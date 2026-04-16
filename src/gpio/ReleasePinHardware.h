@@ -9,11 +9,15 @@
 
 class ReleasePinHardware : public ReleasePin
 {
+public:
+    ReleasePinHardware(int pinNumber);
     ~ReleasePinHardware() override = default;
     void setValue(float value) override;
     void enable(bool flag) override;
     void complete() override;
 
+private:
+    const std::string DEBUG_TEXT_PREFIX = "HARDWARE_PIN ";
 };
 
 

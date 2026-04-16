@@ -5,20 +5,34 @@
 #ifndef RC_VEHICLE_TERMINAL_RELEASEPIN_H
 #define RC_VEHICLE_TERMINAL_RELEASEPIN_H
 #include <string>
-
+#include "../Logger.h"
 
 class ReleasePin
 {
 
 public:
-
     virtual ~ReleasePin() = default;
     virtual void setValue(float value) = 0;
-    virtual void enable(bool flag);
-    virtual void complete();
+    virtual void enable(bool flag) = 0;
+    virtual void complete() = 0;
 
 protected:
-    void log(std::string text);
+    bool debug;
+    int pinNumber = -1;
+    std::string debugPrefixName = "PIN: ";
+
+    void log(std::string text)
+    {
+        if (debug)
+        {
+            Logger::custom(debugPrefixName, text);
+        }
+    }
+    void initDebug(bool debug, std::string text)
+    {
+        this->debug = debug;
+        this->debugPrefixName = (text +  + ": ");
+    }
 };
 
 

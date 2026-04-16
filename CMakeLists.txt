@@ -39,7 +39,6 @@ add_executable(RC_Vehicle_terminal ${SOURCES}
         src/gamepad/InputController.h
         src/gamepad/KeyboardDataStruct.cpp
         src/gamepad/KeyboardDataStruct.h
-        src/gpio/ReleasePin.cpp
         src/gpio/ReleasePin.h
         src/gpio/ReleasePinHardware.cpp
         src/gpio/ReleasePinHardware.h
