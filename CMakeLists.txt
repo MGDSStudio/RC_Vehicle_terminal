@@ -31,7 +31,20 @@ file(GLOB_RECURSE SOURCES
 # Используем переменную SOURCES вместо перечисления файлов
 add_executable(RC_Vehicle_terminal ${SOURCES}
         src/MainController.cpp
-        src/MainController.h)
+        src/MainController.h
+        src/gamepad/GamepadController.cpp
+        src/gamepad/GamepadController.h
+        src/gamepad/KeyboardController.cpp
+        src/gamepad/KeyboardController.h
+        src/gamepad/InputController.h
+        src/gamepad/KeyboardDataStruct.cpp
+        src/gamepad/KeyboardDataStruct.h
+        src/gpio/ReleasePin.cpp
+        src/gpio/ReleasePin.h
+        src/gpio/ReleasePinHardware.cpp
+        src/gpio/ReleasePinHardware.h
+        src/gpio/ReleasePinSoftware.cpp
+        src/gpio/ReleasePinSoftware.h)
 
 
 

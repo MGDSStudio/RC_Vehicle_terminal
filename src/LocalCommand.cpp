@@ -4,17 +4,24 @@
 
 #include "LocalCommand.h"
 
+#include "Constants.h"
+
 int LocalCommand::counter = 0;
 
-LocalCommand::LocalCommand(LocalCommandPrefix globalCommandPrefix, int param) {
+LocalCommand::LocalCommand(LocalCommandPrefix globalCommandPrefix, float param) {
     this->prefix = globalCommandPrefix;
-    this->intValue = param;
+    this->floatValue = param;
     setId();
 }
 
 LocalCommand::LocalCommand(LocalCommandPrefix globalCommandPrefix, bool enabled) {
     this->prefix = globalCommandPrefix;
     this->boolValue = enabled;
+    if (enabled)
+    {
+        floatValue = Constants::MAX_GAMEPAD_AXIS_VALUE;
+    }
+    else floatValue = Constants::NEUTRAL_GAMEPAD_AXIS_VALUE;
     setId();
 }
 

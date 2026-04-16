@@ -12,7 +12,7 @@ class LocalCommand {
 public:
     LocalCommand();
 
-    LocalCommand(LocalCommandPrefix globalCommandPrefix, int param);
+    LocalCommand(LocalCommandPrefix globalCommandPrefix, float param);
 
     LocalCommand(LocalCommandPrefix globalCommandPrefix, bool enabled);
 
@@ -21,8 +21,6 @@ public:
     [[nodiscard]] float getFloatValue() const {
         return floatValue;
     }
-
-
 
     void setPrefix(LocalCommandPrefix globalCommandPrefix);
 

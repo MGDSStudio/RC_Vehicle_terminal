@@ -28,6 +28,10 @@ public:
         else if (button_code == gripperUpButton) return GRIPPER_UP;
         else if (button_code == gripperDownButton) return GRIPPER_DOWN;
         else if (button_code == switch_off) return SWITCH_OFF;
+        else if (button_code == upDigital) return MOVE_FORWARD_DIGITAL;
+        else if (button_code == downDigital) return MOVE_BACKWARD_DIGITAL;
+        else if (button_code == leftDigital) return ROTATE_CCW_DIGITAL;
+        else if (button_code == rightDigital) return ROTATE_CW_DIGITAL;
         else {
             return NO_DATA;
         }
@@ -58,12 +62,9 @@ private:
         int yAxis = SDL_GAMEPAD_AXIS_LEFTY;
         int leftDigital = SDL_GAMEPAD_BUTTON_DPAD_LEFT;
         int rightDigital = SDL_GAMEPAD_BUTTON_DPAD_RIGHT;
+        int upDigital = SDL_GAMEPAD_BUTTON_DPAD_UP;
+        int downDigital = SDL_GAMEPAD_BUTTON_DPAD_DOWN;
         int buzzerAxis = SDL_GAMEPAD_AXIS_RIGHT_TRIGGER;
-        /*sf::Joystick::Axis xAxis = sf::Joystick::Axis::X;
-        sf::Joystick::Axis yAxis = sf::Joystick::Axis::Y;
-        sf::Joystick::Axis xAxisDigital = sf::Joystick::Axis::PovX;
-        sf::Joystick::Axis yAxisDigital = sf::Joystick::Axis::PovY;
-        sf::Joystick::Axis buzzerAxis = sf::Joystick::Axis::R;*/
 };
 
 

@@ -16,8 +16,9 @@ public:
     static constexpr float MIN_ANALOG_VALUE = -1;
     inline static const std::filesystem::path PATH_TO_DATA = "data";
 
-    static constexpr float MIN_GAMEPAD_AXIS_VALUE = -100;
-    static constexpr float MAX_GAMEPAD_AXIS_VALUE = 100;
+    static constexpr float MIN_GAMEPAD_AXIS_VALUE = -32768;
+    static constexpr float MAX_GAMEPAD_AXIS_VALUE = 32767;
+    static constexpr float NEUTRAL_GAMEPAD_AXIS_VALUE = 0;
 };
 
 
