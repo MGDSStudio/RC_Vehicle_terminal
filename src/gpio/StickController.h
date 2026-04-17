@@ -4,16 +4,16 @@
 
 #ifndef CMAKESFMLPROJECT_STICKCONTROLLER_H
 #define CMAKESFMLPROJECT_STICKCONTROLLER_H
+#include "AnalogMovementCalculator.h"
 #include "TouchPlace.h"
 #include "WheelsControlDataStruct.h"
-#include "WheelsSignalsCalculatorAnalog.h"
 
 
 class StickController
 {
 
 public:
-    StickController() = default;
+    StickController();
     ~StickController() = default;
 
     void setX(const float x)
@@ -26,19 +26,11 @@ public:
         touch_place.setX(x);
     }
 
-    void update()
-    {
-        if (touch_place.wasPlaceUpdated())
-        {
-
-        }
-    }
-
     void updateDataStruct(WheelsControlDataStruct* wheels_control_data_struct)
     {
         if (touch_place.wasPlaceUpdated())
         {
-
+            analog_movement_calculator.updateDataStruct(wheels_control_data_struct, 1,1);
         }
     }
 
@@ -47,6 +39,7 @@ private:
     TouchPlace touch_place {1,25};
     bool inDeadZone = true;
     bool placeUpdated;
+    AnalogMovementCalculator analog_movement_calculator;
 };
 
 

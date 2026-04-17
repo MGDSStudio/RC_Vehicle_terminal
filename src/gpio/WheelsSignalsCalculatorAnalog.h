@@ -5,8 +5,9 @@
 #ifndef RC_VEHICLE_TERMINAL_WHEELSSIGNALSCALCULATORANALOG_H
 #define RC_VEHICLE_TERMINAL_WHEELSSIGNALSCALCULATORANALOG_H
 #include "IWheelsSignalsCalculator.h"
-#include "../Constants.h"
 #include "StickController.h"
+#include "../Constants.h"
+
 #include "WheelsControlDataStruct.h"
 
 class WheelsSignalsCalculatorAnalog : public IWheelsSignalsCalculator
@@ -32,6 +33,7 @@ private:
     inline static float DEAD_ZONE_MAX = 0.05f;
     inline static float DEAD_ZONE_MIN = -DEAD_ZONE_MAX;
     WheelsControlDataStruct wheels_control_data_struct;
+    StickController stick_controller;
     static void logNotImplemented()
     {
         log("not implemented");
@@ -45,7 +47,7 @@ private:
         }
     }
 
-    StickController stick_controller;
+
 };
 
 

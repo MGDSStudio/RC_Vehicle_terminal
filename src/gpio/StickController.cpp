@@ -4,3 +4,6 @@
 
 #include "StickController.h"
 
+StickController::StickController()
+{
+}
