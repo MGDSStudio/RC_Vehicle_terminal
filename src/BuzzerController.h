@@ -8,12 +8,7 @@
 #include "LocalCommandsListener.h"
 #include "IUpdateable.h"
 #include "gpio/SinglePinActor.h"
-#include "gpio/SoftwarePin.h"
 #include "gpio/PinsInitializer.h"
-#include "LocalCommandPrefix.h"
-#include "LocalCommandsListenersObserverSingleton.h"
-#include "gpio/ReleasePinSoftware.h"
-#include "gpio/ReleasePinHardware.h"
 
 class BuzzerController : public IUpdateable, LocalCommandsListener{
     //

@@ -41,7 +41,7 @@ void MainController::update(float tpf)
         {
             close();
         }
-        SDL_Delay(10);
+        SDL_Delay(30);
 }
 
 

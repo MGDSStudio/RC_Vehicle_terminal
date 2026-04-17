@@ -5,6 +5,9 @@
 #include "BuzzerController.h"
 
 #include "GeometrieLibrary.h"
+#include "LocalCommandsListenersObserverSingleton.h"
+#include "gpio/ReleasePinHardware.h"
+#include "gpio/ReleasePinSoftware.h"
 
 
 BuzzerController::BuzzerController(){
@@ -32,7 +35,6 @@ void BuzzerController::init() {
     if (!enableSoftwarePin) buzzerPin = -1;
     this->buzzer.setSoftwarePin(new ReleasePinSoftware(buzzerPin));
     LocalCommandsListenersObserverSingleton::getInstance().subscribe(this);
-
 }
 
 void BuzzerController::update(float tpf) {

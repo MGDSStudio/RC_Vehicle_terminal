@@ -9,9 +9,15 @@
 #include <SDL3/SDL.h>
 
 #include "gamepad/GamepadController.h"
-#include "gamepad/KeyboardController.h"
 #include "BuzzerController.h"
 #include "MovementController.h"
+
+#include <iostream>
+#include <string>
+#include <thread>
+#include <atomic>
+
+std::atomic<bool> keepRunning(true);
 
 class MainController : public IUpdateable
 {
@@ -26,6 +32,7 @@ public:
     }
 
 private:
+
     bool* completeFlagApplicationLevel = nullptr;
     bool completeFlagInputLevel = false;
     int frames = 0;

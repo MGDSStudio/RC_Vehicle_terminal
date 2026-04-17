@@ -5,10 +5,6 @@
 #include "WheelActor.h"
 
 
-WheelActor::WheelActor(Pin *pinForward, Pin *pinBackward) : pinForward(pinForward), pinBackward(pinBackward) {
-    
-}
-
 WheelActor::WheelActor() {
 
 }

@@ -39,14 +39,9 @@ MovementController::MovementController() {
     auto pinNumberRightRearBackward = map->at(PinActionName::RIGHT_REAR_WHEEL_BACKWARD);
     this->wheelBackwardRight.setPinBackward(new ReleasePinSoftware(pinNumberRightRearBackward));
     this->wheelBackwardRight.setHardwarePinBackward(new ReleasePinHardware(pinNumberRightRearBackward));
-
     //WheelActor* wheelForwardLeft, WheelActor* wheelForwardRight, WheelActor* wheelBackwardLeft, WheelActor* wheelBackwardRight
     this->wheelSignalsCalculator = new WheelsSignalsCalculatorSimple(&wheelForwardLeft, &wheelForwardRight, &wheelBackwardLeft, &wheelBackwardRight);
-
     LocalCommandsListenersObserverSingleton::getInstance().subscribe(this);
-
-
-
     Logger::debug("Movement controller init successfully");
 }
 
@@ -62,9 +57,6 @@ void MovementController::update(float tpf){
 void MovementController::complete() {
 }
 
-void MovementController::applyMovementForward(LocalCommand* localCommand){
-
-}
 
 void MovementController::onCommandReceived(LocalCommand &global_command) {
     if (global_command.getPrefix() == LocalCommandPrefix::MOVEMENT_FORWARD || global_command.getPrefix() == LocalCommandPrefix::MOVEMENT_BACKWARD){
@@ -109,5 +101,10 @@ void MovementController::onCommandReceived(LocalCommand &global_command) {
 }
 
 void MovementController::applyRotation(LocalCommand *localCommand) {
+
+}
+
+
+void MovementController::applyMovementForward(LocalCommand* localCommand){
 
 }

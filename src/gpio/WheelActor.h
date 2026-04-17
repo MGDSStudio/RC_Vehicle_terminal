@@ -14,12 +14,11 @@
 class WheelActor{
 
 public:
-    WheelActor(Pin *pinForward, Pin *pinBackward);
     WheelActor();
 
     ~WheelActor(){
-        delete pinForward;
-        delete pinBackward;
+        delete softwarePinForward;
+        delete softwarePinBackward;
         delete hardwarePinForward;
         delete hardwarePinBackward;
     }
@@ -38,7 +37,6 @@ private:
     ReleasePin* hardwarePinForward = nullptr;
     ReleasePin* hardwarePinBackward = nullptr;
     float direction;
-
 };
 
 

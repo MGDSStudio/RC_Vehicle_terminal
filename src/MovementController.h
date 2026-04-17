@@ -11,7 +11,7 @@
 #include "IUpdateable.h"
 #include "gpio/SinglePinActor.h"
 #include "gpio/WheelActor.h"
-#include "WheelsSignalsCalculatorSimple.h"
+#include "gpio/WheelsSignalsCalculatorSimple.h"
 #include "gpio/ReleasePinHardware.h"
 #include "gpio/ReleasePinSoftware.h"
 
@@ -21,16 +21,12 @@ class MovementController : public IUpdateable, LocalCommandsListener{
 
 public:
     MovementController();
-    ~MovementController();
+    ~MovementController() override;
     void update(float tpf) override;
     void complete() override;
     void onCommandReceived(LocalCommand& local_command) override;
 
-
 private:
-    //constexpr static float MIN_DEAD_ZONE_FOR_ROTATION = -0.95;
-    //constexpr static float MAX_DEAD_ZONE_FOR_ROTATION = 0.95;
-    
     WheelActor wheelForwardLeft;
     WheelActor wheelForwardRight;
     WheelActor wheelBackwardLeft;
@@ -41,11 +37,9 @@ private:
     void applyMovementForward(LocalCommand* localCommand);
     void applyRotation(LocalCommand* localCommand);
 
-
     static bool inDeadZone(const float val) {
         return (val>=DEAD_ZONE_MIN && val<=DEAD_ZONE_MAX);
     }
 };
-
 
 #endif //CMAKESFMLPROJECT_MOVEMENTCONTROLLER_H
