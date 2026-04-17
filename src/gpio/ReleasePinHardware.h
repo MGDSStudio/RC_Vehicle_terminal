@@ -16,7 +16,7 @@ static bool gpioInitialised = false;
 class ReleasePinHardware : public ReleasePin
 {
 public:
-    ReleasePinHardware(int pinNumber) : ReleasePin(pinNumber, true, "HARDWARE_PIN "){
+    ReleasePinHardware(int pinNumber) : ReleasePin(pinNumber, true, "HARDWARE_PIN"){
         if (!gpioInitialised) {
         #ifdef IS_RPI
             auto errorCode = gpioInitialise();
@@ -41,7 +41,7 @@ public:
 private:
     constexpr static int ENABLE_PIN = 0;
     constexpr static int DISABLE_PIN = 1;
-    const std::string DEBUG_TEXT_PREFIX = "HARDWARE_PIN ";
+    const std::string DEBUG_TEXT_PREFIX = "HARDWARE_PIN";
     const int ENABLED_PWM_VALUE = 0;
     const int DISABLED_PWM_VALUE = 255;
     int mapForPwm(float fromMinusOneUpToOne);
