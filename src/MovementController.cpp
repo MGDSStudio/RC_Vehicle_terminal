@@ -88,13 +88,19 @@ void MovementController::onCommandReceived(const LocalCommand &local_command) {
     }
     else if (prefix == LocalCommandPrefix::PREFIX_MOVEMENT_FORWARD || prefix == LocalCommandPrefix::PREFIX_MOVEMENT_BACKWARD){
         bool pressed = local_command.getBool();
-        if (!pressed) wheelSignalsCalculatorDigital->stopAll();
+        if (!pressed) {
+            wheelSignalsCalculatorDigital->stopAll();
+            return;
+        }
         if (prefix == LocalCommandPrefix::PREFIX_MOVEMENT_FORWARD) wheelSignalsCalculatorDigital->applyMoveForward();
         else wheelSignalsCalculatorDigital->applyMoveBackward();
     }
     else if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CW || prefix == LocalCommandPrefix::PREFIX_ROTATION_CCW) {
         bool pressed = local_command.getBool();
-        if (!pressed) wheelSignalsCalculatorDigital->stopAll();
+        if (!pressed) {
+            wheelSignalsCalculatorDigital->stopAll();
+            return;
+        }
         if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CW) wheelSignalsCalculatorDigital->applyRotationCw();
         else wheelSignalsCalculatorDigital->applyRotationCcw();
     }
