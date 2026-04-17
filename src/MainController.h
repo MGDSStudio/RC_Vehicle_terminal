@@ -12,12 +12,9 @@
 #include "BuzzerController.h"
 #include "MovementController.h"
 
-#include <iostream>
-#include <string>
 #include <thread>
 #include <atomic>
-
-std::atomic<bool> keepRunning(true);
+#include <string>
 
 class MainController : public IUpdateable
 {
@@ -44,6 +41,10 @@ private:
     {
         *this->completeFlagApplicationLevel = true;
     }
+
+    void inputHandler(); // The function the thread will run
+    std::thread consoleThread;
+    std::atomic<bool> keepRunning{true};
 };
 
 

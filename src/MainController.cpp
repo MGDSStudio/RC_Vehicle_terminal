@@ -15,11 +15,19 @@ MainController::MainController()
     }
     std::cout << "Поиск геймпадов... Нажмите Ctrl+C для выхода." << std::endl;
     gamepadController.attachCompletionFlagData(&completeFlagInputLevel);
+
+    consoleThread = std::thread(&MainController::inputHandler, this);
 }
 
 MainController::~MainController()
 {
     delete completeFlagApplicationLevel;
+    keepRunning = false;
+    if (consoleThread.joinable()) {
+        // Since std::cin is blocking, detach is often safer for CLI apps
+        // to prevent the app from hanging on exit
+        consoleThread.detach();
+    }
 }
 
 void MainController::update(float tpf)
@@ -53,4 +61,19 @@ void MainController::complete()
     PinsInitializer pins_initializer;
     pins_initializer.complete();
     SDL_Quit();
+}
+
+void MainController::inputHandler() {
+    std::string command;
+    while (keepRunning) {
+        if (std::cin >> command) {
+            if (command == "CLOSE" || command == "EXIT" || command == "QUIT" || command == "STOP" || command == "close" || command == "exit" || command == "quit" || command == "stop") {
+                keepRunning = false;
+                SDL_Event quitEvent;
+                quitEvent.type = SDL_EVENT_QUIT;
+                SDL_PushEvent(&quitEvent);
+                // Add logic to notify the main SDL loop
+            }
+        }
+    }
 }
