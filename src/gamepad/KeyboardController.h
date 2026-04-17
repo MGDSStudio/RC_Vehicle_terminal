@@ -12,7 +12,7 @@
 
 class KeyboardController : public IUpdateable, InputController
 {
-    public:
+public:
     KeyboardController();
     ~KeyboardController() override;
     void update(float tpf) override;

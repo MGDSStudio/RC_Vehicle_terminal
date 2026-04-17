@@ -20,7 +20,7 @@ public:
 
     void update(float tpf) override;
     void complete() override;
-    void onCommandReceived(LocalCommand& global_command) override;
+    void onCommandReceived(const LocalCommand& global_command) override;
     
 private:
     const std::filesystem::path PATH = Constants::PATH_TO_DATA / "gpio.json";

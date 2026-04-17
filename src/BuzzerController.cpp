@@ -41,7 +41,7 @@ void BuzzerController::update(float tpf) {
 
 }
 
-void BuzzerController::onCommandReceived(LocalCommand& global_command){
+void BuzzerController::onCommandReceived(const LocalCommand& global_command){
     if (global_command.getPrefix() == LocalCommandPrefix::NOISE_DIGITAL){
         bool enable = global_command.getBool();
         if (enable){

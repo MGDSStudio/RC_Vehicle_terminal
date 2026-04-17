@@ -4,6 +4,8 @@
 
 #include "MovementController.h"
 
+#include <SDL3/SDL_stdinc.h>
+
 #include "LocalCommandsListenersObserverSingleton.h"
 #include "gpio/PinsInitializer.h"
 
@@ -50,48 +52,58 @@ MovementController::~MovementController() {
 }
 
 
-void MovementController::update(float tpf){
-    
-}
-
 void MovementController::complete() {
+    LocalCommandsListenersObserverSingleton::getInstance().unsubscribe(this);
+}
+
+void MovementController::updateMovementAnalog(float value) const
+{
+
+    /*if (inDeadZone(value)) wh
+
+    if (value>=0.0) wheelSignalsCalculator->applyMoveForward(value);
+    else wheelSignalsCalculator->applyMoveBackward((-1*value));*/
+}
+
+void MovementController::updateRotationAnalog(float value) const
+{
+    if (value<=0) wheelSignalsCalculator->applyRotationCcw(-1*value);
+    else wheelSignalsCalculator->applyRotationCw((value));
 }
 
 
-void MovementController::onCommandReceived(LocalCommand &global_command) {
-    if (global_command.getPrefix() == LocalCommandPrefix::MOVEMENT_FORWARD || global_command.getPrefix() == LocalCommandPrefix::MOVEMENT_BACKWARD){
-        applyMovementForward(&global_command);
-        float value = global_command.getFloatValue();
-        if (inDeadZone(value)) {
+void MovementController::onCommandReceived(const LocalCommand &local_command) {
+    auto prefix = local_command.getPrefix();
+    if (prefix == LocalCommandPrefix::MOVEMENT_ANALOG)
+    {
+        updateMovementAnalog(local_command.getFloatValue());
+    }
+    else if (prefix == LocalCommandPrefix::ROTATION_ANALOG)
+    {
+        updateRotationAnalog(local_command.getFloatValue());
+    }
+    else if (prefix == LocalCommandPrefix::MOVEMENT_FORWARD || prefix == LocalCommandPrefix::MOVEMENT_BACKWARD){
+        float valueFromMinusOneToOne = local_command.getFloatValue();
+        if (inDeadZone(valueFromMinusOneToOne)) {
             wheelSignalsCalculator->stopAll();
-            //Logger::debug("Stop movement");
         }
-        else if (value < 0){
-            //buzzer.enable(true);
-            wheelSignalsCalculator->applyMoveForward(value);
-            //Logger::debug("Move forward");
+        else if (valueFromMinusOneToOne > 0){
+            wheelSignalsCalculator->applyMoveForward(valueFromMinusOneToOne);
         }
         else {
-            //buzzer.enable(false);
-            wheelSignalsCalculator->applyMoveBackward(value);
-           // Logger::debug("Move backward");
+            wheelSignalsCalculator->applyMoveBackward(valueFromMinusOneToOne);
         }
     }
-    else if (global_command.getPrefix() == LocalCommandPrefix::ROTATION_CW || global_command.getPrefix() == LocalCommandPrefix::ROTATION_CCW) {
-        float value = global_command.getFloatValue();
+    else if (prefix == LocalCommandPrefix::ROTATION_CW || prefix == LocalCommandPrefix::ROTATION_CCW) {
+        float value = local_command.getFloatValue();
         if (inDeadZone(value)) {
             wheelSignalsCalculator->stopAll();
-            //Logger::debug("Stop rotation");
         }
         else if (value > 0){
-            //buzzer.enable(true);
-            wheelSignalsCalculator->applyRotationCw(value);
-            //Logger::debug("Rotate cw");
+            wheelSignalsCalculator->applyRotationCw();
         }
         else {
-            //buzzer.enable(false);
-            wheelSignalsCalculator->applyRotationCcw(value);
-            //Logger::debug("Rotate ccw");
+            wheelSignalsCalculator->applyRotationCcw();
         }
     }
     else {
@@ -100,11 +112,37 @@ void MovementController::onCommandReceived(LocalCommand &global_command) {
     }
 }
 
-void MovementController::applyRotation(LocalCommand *localCommand) {
 
+
+/*
+void MovementController::onCommandReceived(const LocalCommand &local_command) {
+    if (local_command.getPrefix() == LocalCommandPrefix::MOVEMENT_FORWARD || local_command.getPrefix() == LocalCommandPrefix::MOVEMENT_BACKWARD){
+        float valueFromMinusOneToOne = local_command.getFloatValue();
+        if (inDeadZone(valueFromMinusOneToOne)) {
+            wheelSignalsCalculator->stopAll();
+        }
+        else if (valueFromMinusOneToOne > 0){
+            wheelSignalsCalculator->applyMoveForward(valueFromMinusOneToOne);
+        }
+        else {
+            wheelSignalsCalculator->applyMoveBackward(valueFromMinusOneToOne);
+        }
+    }
+    else if (local_command.getPrefix() == LocalCommandPrefix::ROTATION_CW || local_command.getPrefix() == LocalCommandPrefix::ROTATION_CCW) {
+        float value = local_command.getFloatValue();
+        if (inDeadZone(value)) {
+            wheelSignalsCalculator->stopAll();
+        }
+        else if (value > 0){
+            wheelSignalsCalculator->applyRotationCw(value);
+        }
+        else {
+            wheelSignalsCalculator->applyRotationCcw(value);
+        }
+    }
+    else {
+        //auto val = global_command.getPrefix();
+        //Logger::debug("Wrong prefix for command" );
+    }
 }
-
-
-void MovementController::applyMovementForward(LocalCommand* localCommand){
-
-}
+*/

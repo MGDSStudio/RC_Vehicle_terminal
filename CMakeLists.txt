@@ -25,7 +25,9 @@ file(GLOB_RECURSE SOURCES
         "src/*.hpp"
 )
 
-add_executable(RC_Vehicle_terminal ${SOURCES})
+add_executable(RC_Vehicle_terminal ${SOURCES}
+        src/CompletionController.cpp
+        src/CompletionController.h)
 
 # 3. Привязываем найденную в системе SDL3
 target_link_libraries(RC_Vehicle_terminal PRIVATE SDL3::SDL3)

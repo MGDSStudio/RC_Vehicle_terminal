@@ -19,6 +19,10 @@ public:
     static constexpr float MIN_GAMEPAD_AXIS_VALUE = -32768;
     static constexpr float MAX_GAMEPAD_AXIS_VALUE = 32767;
     static constexpr float NEUTRAL_GAMEPAD_AXIS_VALUE = 0;
+    static constexpr float NEUTRAL_ANALOG_VALUE = NEUTRAL_GAMEPAD_AXIS_VALUE;
+
+    static constexpr float MIN_EFFECTIVE_PWM_VALUE_FOR_MAX_VALUE = 0;
+    static constexpr float MAX_EFFECTIVE_PWM_VALUE_FOR_MIN_VALUE = 190;
 };
 
 

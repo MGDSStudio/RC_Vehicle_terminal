@@ -16,6 +16,8 @@
 #include <atomic>
 #include <string>
 
+#include "CompletionController.h"
+
 class MainController : public IUpdateable
 {
 public:
@@ -36,6 +38,7 @@ private:
     GamepadController gamepadController;
     BuzzerController buzzerController;
     MovementController movementController;
+    CompletionController completionController;
     SDL_Event event;
     void close() const
     {

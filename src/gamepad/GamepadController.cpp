@@ -4,6 +4,7 @@
 
 #include "GamepadController.h"
 
+#include "../GeometrieLibrary.h"
 #include "../LocalCommandsListenersObserverSingleton.h"
 
 GamepadController::GamepadController() {
@@ -13,7 +14,6 @@ GamepadController::GamepadController() {
 GamepadController::~GamepadController() {
     complete();
 }
-
 
 void GamepadController::update(float tpf)
 {
@@ -80,28 +80,24 @@ void GamepadController::applyInputEvent(SDL_Event* event)
     LocalCommand local_command;
     switch (event->type)
     {
-    case SDL_EVENT_GAMEPAD_BUTTON_DOWN:
-        if (event->gbutton.button == SDL_GAMEPAD_BUTTON_SOUTH) { // 'A' on Xbox, 'Cross' on PS
+        case SDL_EVENT_GAMEPAD_BUTTON_DOWN:
             updateButtonPressed(event, &local_command);
-        }
-        break;
-    case SDL_EVENT_GAMEPAD_BUTTON_UP:
-        if (event->gbutton.button == SDL_GAMEPAD_BUTTON_SOUTH) { // 'A' on Xbox, 'Cross' on PS
+            break;
+        case SDL_EVENT_GAMEPAD_BUTTON_UP:
             updateButtonReleased(event, &local_command);
-        }
-        break;
-    case SDL_EVENT_GAMEPAD_AXIS_MOTION:
-        updateAxisMoved(event, &local_command);
-        break;
+            break;
+        case SDL_EVENT_GAMEPAD_AXIS_MOTION:
+            updateAxisMoved(event, &local_command);
+            break;
     }
-    LocalCommandsListenersObserverSingleton::getInstance().broadcast(local_command);
+    if (local_command.getPrefix() != LocalCommandPrefix::NO_DATA) LocalCommandsListenersObserverSingleton::getInstance().broadcast(local_command);
 }
 
 void GamepadController::updateButtonPressed(SDL_Event* event, LocalCommand* local_command)
 {
     const auto localPrefix = getPrefixForButton(event->gbutton.button);
     local_command->setPrefix(localPrefix);
-    local_command->setFloatValue(Constants::MAX_GAMEPAD_AXIS_VALUE);
+    local_command->setFloatValue(Constants::MAX_ANALOG_VALUE);
     local_command->setBoolValue(true);
 }
 
@@ -109,21 +105,56 @@ void GamepadController::updateButtonReleased(SDL_Event* event, LocalCommand* loc
 {
     const auto localPrefix = getPrefixForButton(event->gbutton.button);
     local_command->setPrefix(localPrefix);
-    local_command->setFloatValue(Constants::NEUTRAL_GAMEPAD_AXIS_VALUE);
+    local_command->setFloatValue(Constants::NEUTRAL_ANALOG_VALUE);
     local_command->setBoolValue(false);
 }
 
+
 void GamepadController::updateAxisMoved(SDL_Event* event, LocalCommand* local_command)
 {
-    constexpr int deadzone = 8000;
-    if (SDL_abs(event->gaxis.value) > deadzone) {
-        /*if (event.gaxis.axis == SDL_GAMEPAD_AXIS_LEFT_X) {
-            std::cout << "Left Stick X: " << event.gaxis.value << std::endl;
-        }
-        if (event.gaxis.axis == SDL_GAMEPAD_AXIS_LEFT_Y) {
-            std::cout << "Left Stick Y: " << event.gaxis.value << std::endl;
-        }*/
+    SDL_GamepadAxis axisType = static_cast<SDL_GamepadAxis>(event->gaxis.axis);
+    auto axis_value = event->gaxis.value;   //-32000 + 32000
+    const LocalCommandPrefix localPrefix = getPrefixForAxis(axisType, axis_value);
+    float mappedAxisValue;
+    local_command->setPrefix(localPrefix);
+    if (axis_value < AXIS_DEAD_ZONE_MIN || axis_value > AXIS_DEAD_ZONE_MAX) {
+        mappedAxisValue = map(localPrefix, axis_value);
     }
+    else
+    {
+        mappedAxisValue = 0;
+    }
+    local_command->setFloatValue(mappedAxisValue);
+}
+
+LocalCommandPrefix GamepadController::getPrefixForAxis(const SDL_GamepadAxis& gaxis, Sint16 value)
+{
+    const std::string name = gamepad_data_struct.getNameForAxis(gaxis);
+    auto local_command_prefix = LocalCommandPrefix::NO_DATA;
+    if (name != NO_DATA)
+    {
+        if (name == MOVEMENT_ANALOG)
+        {
+            local_command_prefix = LocalCommandPrefix::MOVEMENT_ANALOG;
+            //if (value>0) local_command_prefix = LocalCommandPrefix::MOVEMENT_FORWARD;
+            //else local_command_prefix = LocalCommandPrefix::MOVEMENT_BACKWARD;
+        }
+        else if (name == ROTATION_ANALOG)
+        {
+            local_command_prefix = LocalCommandPrefix::ROTATION_ANALOG;
+            //if (value>0) local_command_prefix = LocalCommandPrefix::ROTATION_CW;
+            //else local_command_prefix = LocalCommandPrefix::ROTATION_CCW;
+        }
+        else if (name == BUZZER_ANALOG)
+        {
+            local_command_prefix = LocalCommandPrefix::NOISE_ANALOG;
+        }
+        else
+        {
+            log("Not known axis " + name);
+        }
+    }
+    return local_command_prefix;
 }
 
 LocalCommandPrefix GamepadController::getPrefixForButton(uint8_t buttonCode)
@@ -162,3 +193,34 @@ LocalCommandPrefix GamepadController::getPrefixForButton(uint8_t buttonCode)
     }
     return local_command_prefix;
 }
+
+/*
+LocalCommandPrefix GamepadController::getPrefixForAxis(const SDL_GamepadAxis& gaxis, Sint16 value)
+{
+    const std::string name = gamepad_data_struct.getNameForAxis(gaxis);
+    auto local_command_prefix = LocalCommandPrefix::NO_DATA;
+    if (name != NO_DATA)
+    {
+        if (name == MOVEMENT_ANALOG)
+        {
+            if (value>0) local_command_prefix = LocalCommandPrefix::MOVEMENT_FORWARD;
+            else local_command_prefix = LocalCommandPrefix::MOVEMENT_BACKWARD;
+        }
+        else if (name == ROTATION_ANALOG)
+        {
+            if (value>0) local_command_prefix = LocalCommandPrefix::ROTATION_CW;
+            else local_command_prefix = LocalCommandPrefix::ROTATION_CCW;
+        }
+        else if (name == BUZZER_ANALOG)
+        {
+            local_command_prefix = LocalCommandPrefix::NOISE_ANALOG;
+        }
+        else
+        {
+            log("Not known axis " + name);
+        }
+    }
+    return local_command_prefix;
+}
+
+*/

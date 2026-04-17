@@ -37,7 +37,7 @@ public:
         }
     }
 
-    std::string getNameForAxis(int axis) {
+    std::string getNameForAxis(SDL_GamepadAxis axis) {
         if (axis == xAxis) return ROTATION_ANALOG;
         else if (axis == yAxis) return MOVEMENT_ANALOG;
         else if (axis == buzzerAxis) return BUZZER_ANALOG;
@@ -58,13 +58,13 @@ private:
         int gripperUpButton = -1;
         int gripperDownButton = -1;
         int switch_off = SDL_GAMEPAD_BUTTON_START;
-        int xAxis = SDL_GAMEPAD_AXIS_LEFTX;
-        int yAxis = SDL_GAMEPAD_AXIS_LEFTY;
+        SDL_GamepadAxis xAxis = SDL_GAMEPAD_AXIS_LEFTX;
+        SDL_GamepadAxis yAxis = SDL_GAMEPAD_AXIS_LEFTY;
         int leftDigital = SDL_GAMEPAD_BUTTON_DPAD_LEFT;
         int rightDigital = SDL_GAMEPAD_BUTTON_DPAD_RIGHT;
         int upDigital = SDL_GAMEPAD_BUTTON_DPAD_UP;
         int downDigital = SDL_GAMEPAD_BUTTON_DPAD_DOWN;
-        int buzzerAxis = SDL_GAMEPAD_AXIS_RIGHT_TRIGGER;
+        SDL_GamepadAxis buzzerAxis = SDL_GAMEPAD_AXIS_RIGHT_TRIGGER;
 };
 
 

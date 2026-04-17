@@ -9,7 +9,7 @@
 
 class LocalCommandsListener {
 public:
-    virtual void onCommandReceived(LocalCommand& global_command);
+    virtual void onCommandReceived(const LocalCommand& global_command);
 };
 
 

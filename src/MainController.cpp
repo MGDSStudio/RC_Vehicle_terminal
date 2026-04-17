@@ -15,7 +15,7 @@ MainController::MainController()
     }
     std::cout << "Поиск геймпадов... Нажмите Ctrl+C для выхода." << std::endl;
     gamepadController.attachCompletionFlagData(&completeFlagInputLevel);
-
+    completionController.attachCompletionFlagData(&completeFlagInputLevel);
     consoleThread = std::thread(&MainController::inputHandler, this);
 }
 
@@ -58,6 +58,7 @@ void MainController::complete()
     gamepadController.complete();
     buzzerController.complete();
     movementController.complete();
+    completionController.complete();
     PinsInitializer pins_initializer;
     pins_initializer.complete();
     SDL_Quit();

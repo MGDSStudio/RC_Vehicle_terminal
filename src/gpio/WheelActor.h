@@ -29,6 +29,8 @@ public:
 
     void setForward(float relativeValue);
     void setBackward(float relativeValue);
+    void setForward();
+    void setBackward();
     void stop();
 
 private:

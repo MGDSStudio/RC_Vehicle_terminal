@@ -27,9 +27,8 @@ void LocalCommandsListenersObserverSingleton::unsubscribe(LocalCommandsListener*
     }
 }
 
-void LocalCommandsListenersObserverSingleton::broadcast(LocalCommand &local_command) const {
+void LocalCommandsListenersObserverSingleton::broadcast(const LocalCommand &local_command) const {
     for (const auto listener : listeners) {
         listener->onCommandReceived(local_command);
     }
-
 }

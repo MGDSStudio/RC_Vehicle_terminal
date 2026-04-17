@@ -4,7 +4,7 @@
 
 #include "LocalCommandsListener.h"
 
-void LocalCommandsListener::onCommandReceived(LocalCommand& global_command){
+void LocalCommandsListener::onCommandReceived(const LocalCommand& global_command){
     
 
     

@@ -22,9 +22,14 @@ class MovementController : public IUpdateable, LocalCommandsListener{
 public:
     MovementController();
     ~MovementController() override;
-    void update(float tpf) override;
+    void update(float tpf) override
+    {
+
+    }
     void complete() override;
-    void onCommandReceived(LocalCommand& local_command) override;
+    void updateMovementAnalog(float get_float_value) const;
+    void updateRotationAnalog(float get_float_value) const;
+    void onCommandReceived(const LocalCommand& local_command) override;
 
 private:
     WheelActor wheelForwardLeft;
@@ -32,11 +37,8 @@ private:
     WheelActor wheelBackwardLeft;
     WheelActor wheelBackwardRight;
     WheelsSignalsCalculatorSimple* wheelSignalsCalculator;
-    inline static const float DEAD_ZONE_MIN = -0.075;
-    inline static const float DEAD_ZONE_MAX = 0.075;
-    void applyMovementForward(LocalCommand* localCommand);
-    void applyRotation(LocalCommand* localCommand);
-
+    inline static const float DEAD_ZONE_MIN = -0.075;   //can be avoided - it was mapped in gamepad controller
+    inline static const float DEAD_ZONE_MAX = 0.075; //can be avoided - it was mapped in gamepad controller
     static bool inDeadZone(const float val) {
         return (val>=DEAD_ZONE_MIN && val<=DEAD_ZONE_MAX);
     }

@@ -34,6 +34,23 @@ void WheelActor::stop() {
     this->direction = 0;
 }
 
+void WheelActor::setForward()
+{
+    softwarePinForward->enable(true);
+    hardwarePinForward->enable(true);
+    softwarePinBackward->enable(false);
+    hardwarePinBackward->enable(false);
+}
+
+void WheelActor::setBackward()
+{
+    softwarePinForward->enable(false);
+    hardwarePinForward->enable(false);
+    softwarePinBackward->enable(true);
+    hardwarePinBackward->enable(true);
+}
+
+
 void WheelActor::setPinForward(ReleasePin* pin){
     this->softwarePinForward = pin;
 }

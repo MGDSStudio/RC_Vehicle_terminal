@@ -10,6 +10,7 @@
 class InputController
 {
 public:
+
     virtual bool attachCommand(SDL_Event* event) = 0;
 };
 
