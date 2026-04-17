@@ -11,6 +11,7 @@
 #include "gamepad/GamepadController.h"
 #include "gamepad/KeyboardController.h"
 #include "BuzzerController.h"
+#include "MovementController.h"
 
 class MainController : public IUpdateable
 {
@@ -30,6 +31,7 @@ private:
     int frames = 0;
     GamepadController gamepadController;
     BuzzerController buzzerController;
+    MovementController movementController;
     SDL_Event event;
     void close() const
     {

@@ -36,6 +36,7 @@ void MainController::update(float tpf)
         }
         gamepadController.update(1);
         buzzerController.update(1);
+        movementController.update(1);
         if (this->completeFlagInputLevel == true)
         {
             close();
@@ -48,6 +49,7 @@ void MainController::complete()
 {
     gamepadController.complete();
     buzzerController.complete();
+    movementController.complete();
     PinsInitializer pins_initializer;
     pins_initializer.complete();
     SDL_Quit();

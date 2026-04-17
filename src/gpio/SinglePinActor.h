@@ -5,9 +5,6 @@
 #ifndef RC_VEHICLE_WHEEL_H
 #define RC_VEHICLE_WHEEL_H
 
-
-#include "Pin.h"
-#include "PinCommon.h"
 #include "ReleasePin.h"
 
 class SinglePinActor {

@@ -54,8 +54,6 @@ void BuzzerController::onCommandReceived(LocalCommand& global_command){
     else if (global_command.getPrefix() == LocalCommandPrefix::NOISE_ANALOG) {
         float floatVal = global_command.getFloatValue();
         float mappedFromNullUpToOne = GeometrieLibrary::map(floatVal, Constants::MIN_ANALOG_VALUE, Constants::MAX_ANALOG_VALUE, 0, Constants::MAX_ANALOG_VALUE);
-        //Logger::debug("Buzzer enabled from analog command to value: " + std::to_string(mappedFromNullUpToOne) + " from original " + std::to_string(floatVal));
-
         if (mappedFromNullUpToOne<=DEAD_ZONE_VALUE) {
             buzzer.enable(false);
             return;
