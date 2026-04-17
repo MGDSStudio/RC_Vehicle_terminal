@@ -30,7 +30,9 @@ add_executable(RC_Vehicle_terminal ${SOURCES}
         src/CompletionController.h
         src/gpio/IWheelsSignalsCalculator.h
         src/gpio/WheelsSignalsCalculatorAnalog.cpp
-        src/gpio/WheelsSignalsCalculatorAnalog.h)
+        src/gpio/WheelsSignalsCalculatorAnalog.h
+        src/preferences/WheelMovementDataStruct.h
+        src/gpio/WheelsControlDataStruct.h)
 
 # 3. Привязываем найденную в системе SDL3
 target_link_libraries(RC_Vehicle_terminal PRIVATE SDL3::SDL3)

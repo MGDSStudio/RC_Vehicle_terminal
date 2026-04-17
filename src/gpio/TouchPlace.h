@@ -29,6 +29,7 @@ public:
         prevX = this->actualX;
         this->actualX = x;
         validateAndCorrect(X_CHANGED);
+        placeWasUpdated = true;
     }
 
     void setY(float y)
@@ -36,6 +37,7 @@ public:
         prevY = this->actualY;
         this->actualY = y;
         validateAndCorrect(Y_CHANGED);
+        placeWasUpdated = true;
     }
 
     float getX()
@@ -48,7 +50,15 @@ public:
         return actualY;
     }
 
-
+    bool wasPlaceUpdated()
+    {
+        if (placeWasUpdated)
+        {
+            placeWasUpdated = false;
+            return true;
+        }
+        else return placeWasUpdated;
+    }
 
 private:
     inline static bool X_CHANGED = true;
@@ -68,6 +78,7 @@ private:
     float angle;
     bool previousPlaceInDeadZone = true;
     bool actualPlaceInDeadZone = false;
+    bool placeWasUpdated = false;
 
     static void log(std::string msg)
     {

@@ -22,10 +22,7 @@ class MovementController : public IUpdateable, LocalCommandsListener{
 public:
     MovementController();
     ~MovementController() override;
-    void update(float tpf) override
-    {
-
-    }
+    void update(float tpf) override;
     void complete() override;
     void updateMovementAnalog(float get_float_value) const;
     void updateRotationAnalog(float get_float_value) const;

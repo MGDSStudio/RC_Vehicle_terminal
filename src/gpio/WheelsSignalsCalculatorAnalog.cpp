@@ -20,5 +20,31 @@ void WheelsSignalsCalculatorAnalog::applyRotation(const float valueBetweenMinusO
     this->stick_controller.setX(valueBetweenMinusOneAndOne);
 }
 
+void WheelsSignalsCalculatorAnalog::update()
+{
+    if (enableAnalogControl)
+    {
+        this->stick_controller.updateDataStruct(&wheels_control_data_struct);
+        setValue(wheels_control_data_struct.frontLeft, wheelForwardLeft);
+        setValue(wheels_control_data_struct.frontRight, wheelForwardRight);
+        setValue(wheels_control_data_struct.rearLeft, wheelBackwardLeft);
+        setValue(wheels_control_data_struct.rearRight, wheelBackwardRight);
+    }
+}
+
+void WheelsSignalsCalculatorAnalog::setValue(float value, WheelActor* wheel_actor) const
+{
+    if ( value>DEAD_ZONE_MAX)
+    {
+        wheel_actor->setForward(wheels_control_data_struct.frontLeft);
+    }
+    else if ( value<DEAD_ZONE_MIN)
+    {
+        wheel_actor->setBackward(-value);
+    }
+    else wheel_actor->stop();
+}
+
+
 
 

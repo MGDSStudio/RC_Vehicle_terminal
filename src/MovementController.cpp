@@ -55,6 +55,10 @@ MovementController::~MovementController() {
     wheelSignalsCalculatorDigital = nullptr;
 }
 
+void MovementController::update(float tpf)
+{
+    wheelSignalsCalculatorAnalog->update();
+}
 
 void MovementController::complete() {
     LocalCommandsListenersObserverSingleton::getInstance().unsubscribe(this);
@@ -69,6 +73,7 @@ void MovementController::updateRotationAnalog(float value) const
 {
     wheelSignalsCalculatorAnalog->applyRotation(value);
 }
+
 
 
 void MovementController::onCommandReceived(const LocalCommand &local_command) {

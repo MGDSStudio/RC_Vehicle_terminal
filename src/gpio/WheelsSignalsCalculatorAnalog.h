@@ -7,6 +7,7 @@
 #include "IWheelsSignalsCalculator.h"
 #include "../Constants.h"
 #include "StickController.h"
+#include "WheelsControlDataStruct.h"
 
 class WheelsSignalsCalculatorAnalog : public IWheelsSignalsCalculator
 {
@@ -22,9 +23,15 @@ public:
     void applyMovement(float valueBetweenMinusOneAndOne);
 
     void applyRotation(float valueBetweenMinusOneAndOne);
+    void setValue(float value, WheelActor* wheel_actor) const;
+    void update();
 
 private:
+    inline static bool enableAnalogControl = false;
     inline static bool debug = true;
+    inline static float DEAD_ZONE_MAX = 0.05f;
+    inline static float DEAD_ZONE_MIN = -DEAD_ZONE_MAX;
+    WheelsControlDataStruct wheels_control_data_struct;
     static void logNotImplemented()
     {
         log("not implemented");
