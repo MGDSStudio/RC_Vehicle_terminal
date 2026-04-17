@@ -72,7 +72,6 @@ void MainController::inputHandler() {
                 SDL_Event quitEvent;
                 quitEvent.type = SDL_EVENT_QUIT;
                 SDL_PushEvent(&quitEvent);
-                // Add logic to notify the main SDL loop
             }
         }
     }
