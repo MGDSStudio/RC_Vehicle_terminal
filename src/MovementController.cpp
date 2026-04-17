@@ -62,7 +62,7 @@ void MovementController::complete() {
 
 void MovementController::updateMovementAnalog(float value) const
 {
-    wheelSignalsCalculatorAnalog->applyMoveForward(value);
+    wheelSignalsCalculatorAnalog->applyMovement(value);
 }
 
 void MovementController::updateRotationAnalog(float value) const

@@ -6,6 +6,7 @@
 #define RC_VEHICLE_TERMINAL_WHEELSSIGNALSCALCULATORANALOG_H
 #include "IWheelsSignalsCalculator.h"
 #include "../Constants.h"
+#include "StickController.h"
 
 class WheelsSignalsCalculatorAnalog : public IWheelsSignalsCalculator
 {
@@ -18,11 +19,26 @@ public:
 
     ~WheelsSignalsCalculatorAnalog() override = default;
 
-    void applyMoveForward(float valueBetweenMinusOneAndOne) const;
+    void applyMovement(float valueBetweenMinusOneAndOne);
 
-    void applyMoveBackward(float valueBetweenMinusOneAndOne) const;
+    void applyRotation(float valueBetweenMinusOneAndOne);
 
-    void applyRotation(float valueBetweenMinusOneAndOne) const;
+private:
+    inline static bool debug = true;
+    static void logNotImplemented()
+    {
+        log("not implemented");
+    }
+
+    static void log(std::string message)
+    {
+        if (debug)
+        {
+            Logger::custom("WheelsSignalsCalculatorAnalog", message);
+        }
+    }
+
+    StickController stick_controller;
 };
 
 

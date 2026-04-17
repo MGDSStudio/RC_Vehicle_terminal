@@ -4,24 +4,21 @@
 
 #include "WheelsSignalsCalculatorAnalog.h"
 
-void WheelsSignalsCalculatorAnalog::applyMoveForward(float valueBetweenMinusOneAndOne) const {
-    if (valueBetweenMinusOneAndOne < Constants::NEUTRAL_ANALOG_VALUE) valueBetweenMinusOneAndOne = Constants::NEUTRAL_ANALOG_VALUE;
-    wheelForwardLeft->setForward(valueBetweenMinusOneAndOne);
-    wheelForwardRight->setForward(valueBetweenMinusOneAndOne);
-    wheelBackwardLeft->setForward(valueBetweenMinusOneAndOne);
-    wheelBackwardRight->setForward(valueBetweenMinusOneAndOne);
+//constexpr static float DEAD_ZONE_NOMINAL = 0.15;
+constexpr static float MIN_DEAD_ZONE_FOR_ROTATION = -0.95;
+constexpr static float MAX_DEAD_ZONE_FOR_ROTATION = 0.95;
+
+
+
+
+void WheelsSignalsCalculatorAnalog::applyMovement(float valueBetweenMinusOneAndOne) {
+    this->stick_controller.setY(valueBetweenMinusOneAndOne);
+
 }
 
-void WheelsSignalsCalculatorAnalog::applyMoveBackward(float valueBetweenMinusOneAndOne) const {
-    wheelForwardLeft->setBackward(valueBetweenMinusOneAndOne);
-    wheelForwardRight->setBackward(valueBetweenMinusOneAndOne);
-    wheelBackwardLeft->setBackward(valueBetweenMinusOneAndOne);
-    wheelBackwardRight->setBackward(valueBetweenMinusOneAndOne);
+void WheelsSignalsCalculatorAnalog::applyRotation(const float valueBetweenMinusOneAndOne) {
+    this->stick_controller.setX(valueBetweenMinusOneAndOne);
 }
 
-void WheelsSignalsCalculatorAnalog::applyRotation(const float valueBetweenMinusOneAndOne) const {
-    wheelForwardLeft->setForward(valueBetweenMinusOneAndOne);
-    wheelForwardRight->setBackward(valueBetweenMinusOneAndOne);
-    wheelBackwardLeft->setForward(valueBetweenMinusOneAndOne);
-    wheelBackwardRight->setBackward(valueBetweenMinusOneAndOne);
-}
+
+

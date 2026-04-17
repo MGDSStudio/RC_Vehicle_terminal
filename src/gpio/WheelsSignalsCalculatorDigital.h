@@ -23,19 +23,10 @@ public:
 
     ~WheelsSignalsCalculatorDigital() override = default;
 
-    void applyMoveForward();
-    void applyMoveBackward();
-    void applyRotationCw();
-    void applyRotationCcw();
-
-    /*void applyMoveForward(float valueBetweenMinusOneAndOne) const;
-
-    void applyMoveBackward(float valueBetweenMinusOneAndOne) const;
-
-    void applyRotationCw(float valueBetweenMinusOneAndOne) const;
-
-    void applyRotationCcw(float valueBetweenMinusOneAndOne) const;*/
-
+    void applyMoveForward() const;
+    void applyMoveBackward() const;
+    void applyRotationCw() const;
+    void applyRotationCcw() const;
 
 protected:
     static int getMappedAxisValue(float betweenMinusOneAndOne)
