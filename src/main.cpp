@@ -6,9 +6,10 @@
 void dispose();
 
 MainController main_controller;
-bool exitCommandReceived = false;
+
 
 int main(int argc, char* argv[]) {
+    bool exitCommandReceived = false;
     main_controller.attachCompletionFlagData(&exitCommandReceived);
     while (!exitCommandReceived)
     {

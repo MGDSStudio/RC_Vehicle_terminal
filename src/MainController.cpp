@@ -4,6 +4,7 @@
 
 #include "MainController.h"
 
+#include "LocalCommandsListenersObserverSingleton.h"
 #include "Logger.h"
 
 MainController::MainController()
@@ -21,12 +22,10 @@ MainController::MainController()
 
 MainController::~MainController()
 {
-    delete completeFlagApplicationLevel;
     keepRunning = false;
     if (consoleThread.joinable()) {
-        // Since std::cin is blocking, detach is often safer for CLI apps
-        // to prevent the app from hanging on exit
         consoleThread.detach();
+        Logger::debug("Console thread was completed successfully");
     }
 }
 
@@ -59,6 +58,7 @@ void MainController::complete()
     buzzerController.complete();
     movementController.complete();
     completionController.complete();
+    LocalCommandsListenersObserverSingleton::getInstance().clear();
     PinsInitializer pins_initializer;
     pins_initializer.complete();
     SDL_Quit();

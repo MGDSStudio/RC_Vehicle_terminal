@@ -17,6 +17,7 @@ public:
     void operator=(const LocalCommandsListenersObserverSingleton &) = delete;
 
     void complete();
+    void clear();
 
     static LocalCommandsListenersObserverSingleton& getInstance() {
         static LocalCommandsListenersObserverSingleton instance;

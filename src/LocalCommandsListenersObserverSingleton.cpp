@@ -32,3 +32,8 @@ void LocalCommandsListenersObserverSingleton::broadcast(const LocalCommand &loca
         listener->onCommandReceived(local_command);
     }
 }
+
+void LocalCommandsListenersObserverSingleton::clear()
+{
+    listeners.clear();
+}

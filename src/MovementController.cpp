@@ -62,13 +62,12 @@ void MovementController::complete() {
 
 void MovementController::updateMovementAnalog(float value) const
 {
-    wheelSignalsCalculatorAnalog->
+    wheelSignalsCalculatorAnalog->applyMoveForward(value);
 }
 
 void MovementController::updateRotationAnalog(float value) const
 {
-    if (value<=0) wheelSignalsCalculatorDigital->applyRotationCcw(-1*value);
-    else wheelSignalsCalculatorDigital->applyRotationCw((value));
+    wheelSignalsCalculatorAnalog->applyRotation(value);
 }
 
 

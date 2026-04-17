@@ -5,7 +5,7 @@
 #ifndef RC_VEHICLE_TERMINAL_WHEELSSIGNALSCALCULATORANALOG_H
 #define RC_VEHICLE_TERMINAL_WHEELSSIGNALSCALCULATORANALOG_H
 #include "IWheelsSignalsCalculator.h"
-
+#include "../Constants.h"
 
 class WheelsSignalsCalculatorAnalog : public IWheelsSignalsCalculator
 {
@@ -18,7 +18,11 @@ public:
 
     ~WheelsSignalsCalculatorAnalog() override = default;
 
+    void applyMoveForward(float valueBetweenMinusOneAndOne) const;
 
+    void applyMoveBackward(float valueBetweenMinusOneAndOne) const;
+
+    void applyRotation(float valueBetweenMinusOneAndOne) const;
 };
 
 

@@ -20,7 +20,7 @@ public:
 
     virtual ~IWheelsSignalsCalculator() = default;
 
-    void stopAll() const {
+    virtual void stopAll() const final {
         wheelForwardLeft->stop();
         wheelForwardRight->stop();
         wheelBackwardLeft->stop();

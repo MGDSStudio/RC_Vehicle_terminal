@@ -28,13 +28,13 @@ public:
     void applyRotationCw();
     void applyRotationCcw();
 
-    void applyMoveForward(float valueBetweenMinusOneAndOne) const;
+    /*void applyMoveForward(float valueBetweenMinusOneAndOne) const;
 
     void applyMoveBackward(float valueBetweenMinusOneAndOne) const;
 
     void applyRotationCw(float valueBetweenMinusOneAndOne) const;
 
-    void applyRotationCcw(float valueBetweenMinusOneAndOne) const;
+    void applyRotationCcw(float valueBetweenMinusOneAndOne) const;*/
 
 
 protected:

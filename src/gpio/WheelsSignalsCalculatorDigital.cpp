@@ -39,7 +39,7 @@ void WheelsSignalsCalculatorDigital::applyRotationCcw()
     wheelBackwardLeft->setBackward();
     wheelBackwardRight->setForward();
 }
-
+/*
 void WheelsSignalsCalculatorDigital::applyMoveForward(float valueBetweenMinusOneAndOne) const {
     if (valueBetweenMinusOneAndOne < Constants::NEUTRAL_ANALOG_VALUE) valueBetweenMinusOneAndOne = Constants::NEUTRAL_ANALOG_VALUE;
     wheelForwardLeft->setForward(valueBetweenMinusOneAndOne);
@@ -73,4 +73,4 @@ void WheelsSignalsCalculatorDigital::applyRotationCcw(const float valueBetweenMi
     }
 }
 
-
+*/
