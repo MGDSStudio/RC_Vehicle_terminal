@@ -62,7 +62,7 @@ private:
     static float map(LocalCommandPrefix local_command_prefix, float rawGamepadValue)
     {
         float min;
-        if (local_command_prefix == LocalCommandPrefix::NOISE_ANALOG)
+        if (local_command_prefix == LocalCommandPrefix::PREFIX_NOISE_ANALOG)
         {
             min = Constants::NEUTRAL_GAMEPAD_AXIS_VALUE;
         }

@@ -2,30 +2,45 @@
 // Created by mgdsstudio on 12.04.2026.
 //
 
-#include "WheelsSignalsCalculatorSimple.h"
+#include "WheelsSignalsCalculatorDigital.h"
 
 //constexpr static float DEAD_ZONE_NOMINAL = 0.15;
 constexpr static float MIN_DEAD_ZONE_FOR_ROTATION = -0.95;
 constexpr static float MAX_DEAD_ZONE_FOR_ROTATION = 0.95;
 
-void WheelsSignalsCalculatorSimple::applyMoveForward()
+void WheelsSignalsCalculatorDigital::applyMoveForward()
 {
-
+    wheelForwardLeft->setForward();
+    wheelForwardRight->setForward();
+    wheelBackwardLeft->setForward();
+    wheelBackwardRight->setForward();
 }
 
-void WheelsSignalsCalculatorSimple::applyMoveBackward()
+void WheelsSignalsCalculatorDigital::applyMoveBackward()
 {
+    wheelForwardLeft->setBackward();
+    wheelForwardRight->setBackward();
+    wheelBackwardLeft->setBackward();
+    wheelBackwardRight->setBackward();
 }
 
-void WheelsSignalsCalculatorSimple::applyRotationCw()
+void WheelsSignalsCalculatorDigital::applyRotationCw()
 {
+    wheelForwardLeft->setForward();
+    wheelForwardRight->setBackward();
+    wheelBackwardLeft->setForward();
+    wheelBackwardRight->setBackward();
 }
 
-void WheelsSignalsCalculatorSimple::applyRotationCcw()
+void WheelsSignalsCalculatorDigital::applyRotationCcw()
 {
+    wheelForwardLeft->setBackward();
+    wheelForwardRight->setForward();
+    wheelBackwardLeft->setBackward();
+    wheelBackwardRight->setForward();
 }
 
-void WheelsSignalsCalculatorSimple::applyMoveForward(float valueBetweenMinusOneAndOne) const {
+void WheelsSignalsCalculatorDigital::applyMoveForward(float valueBetweenMinusOneAndOne) const {
     if (valueBetweenMinusOneAndOne < Constants::NEUTRAL_ANALOG_VALUE) valueBetweenMinusOneAndOne = Constants::NEUTRAL_ANALOG_VALUE;
     wheelForwardLeft->setForward(valueBetweenMinusOneAndOne);
     wheelForwardRight->setForward(valueBetweenMinusOneAndOne);
@@ -33,14 +48,14 @@ void WheelsSignalsCalculatorSimple::applyMoveForward(float valueBetweenMinusOneA
     wheelBackwardRight->setForward(valueBetweenMinusOneAndOne);
 }
 
-void WheelsSignalsCalculatorSimple::applyMoveBackward(float valueBetweenMinusOneAndOne) const {
+void WheelsSignalsCalculatorDigital::applyMoveBackward(float valueBetweenMinusOneAndOne) const {
     wheelForwardLeft->setBackward(valueBetweenMinusOneAndOne);
     wheelForwardRight->setBackward(valueBetweenMinusOneAndOne);
     wheelBackwardLeft->setBackward(valueBetweenMinusOneAndOne);
     wheelBackwardRight->setBackward(valueBetweenMinusOneAndOne);
 }
 
-void WheelsSignalsCalculatorSimple::applyRotationCw(const float valueBetweenMinusOneAndOne) const {
+void WheelsSignalsCalculatorDigital::applyRotationCw(const float valueBetweenMinusOneAndOne) const {
     if (valueBetweenMinusOneAndOne >= MAX_DEAD_ZONE_FOR_ROTATION){
         wheelForwardLeft->setForward(valueBetweenMinusOneAndOne);
         wheelForwardRight->setBackward(valueBetweenMinusOneAndOne);
@@ -49,7 +64,7 @@ void WheelsSignalsCalculatorSimple::applyRotationCw(const float valueBetweenMinu
     }
 }
 
-void WheelsSignalsCalculatorSimple::applyRotationCcw(const float valueBetweenMinusOneAndOne) const {
+void WheelsSignalsCalculatorDigital::applyRotationCcw(const float valueBetweenMinusOneAndOne) const {
     if (valueBetweenMinusOneAndOne <= MIN_DEAD_ZONE_FOR_ROTATION){
         wheelForwardLeft->setBackward(valueBetweenMinusOneAndOne);
         wheelForwardRight->setForward(valueBetweenMinusOneAndOne);
@@ -58,9 +73,4 @@ void WheelsSignalsCalculatorSimple::applyRotationCcw(const float valueBetweenMin
     }
 }
 
-void WheelsSignalsCalculatorSimple::stopAll() const {
-    wheelForwardLeft->stop();
-    wheelForwardRight->stop();
-    wheelBackwardLeft->stop();
-    wheelBackwardRight->stop();
-}
+

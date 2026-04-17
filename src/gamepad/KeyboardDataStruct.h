@@ -32,11 +32,11 @@ public:
 
     LocalCommandPrefix getPrefixForEvent(int key)
     {
-        if (key == up) return LocalCommandPrefix::MOVEMENT_FORWARD;
-        else if (key == down) return LocalCommandPrefix::MOVEMENT_FORWARD;
-        else if (key == left) return LocalCommandPrefix::ROTATION_CCW;
-        else if (key == right) return LocalCommandPrefix::ROTATION_CW;
-        else if (key == switchOff) return LocalCommandPrefix::SWITCH_OFF;
+        if (key == up) return LocalCommandPrefix::PREFIX_MOVEMENT_FORWARD;
+        else if (key == down) return LocalCommandPrefix::PREFIX_MOVEMENT_FORWARD;
+        else if (key == left) return LocalCommandPrefix::PREFIX_ROTATION_CCW;
+        else if (key == right) return LocalCommandPrefix::PREFIX_ROTATION_CW;
+        else if (key == switchOff) return LocalCommandPrefix::PREFIX_SWITCH_OFF;
         else
         {
             return LocalCommandPrefix::NO_DATA;

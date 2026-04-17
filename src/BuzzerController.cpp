@@ -42,7 +42,7 @@ void BuzzerController::update(float tpf) {
 }
 
 void BuzzerController::onCommandReceived(const LocalCommand& global_command){
-    if (global_command.getPrefix() == LocalCommandPrefix::NOISE_DIGITAL){
+    if (global_command.getPrefix() == LocalCommandPrefix::PREFIX_NOISE_DIGITAL){
         bool enable = global_command.getBool();
         if (enable){
             buzzer.enable(true);
@@ -53,7 +53,7 @@ void BuzzerController::onCommandReceived(const LocalCommand& global_command){
             Logger::debug("Buzzer disabled from digital command");
         }
     }
-    else if (global_command.getPrefix() == LocalCommandPrefix::NOISE_ANALOG) {
+    else if (global_command.getPrefix() == LocalCommandPrefix::PREFIX_NOISE_ANALOG) {
         float floatVal = global_command.getFloatValue();
         float mappedFromNullUpToOne = GeometrieLibrary::map(floatVal, Constants::MIN_ANALOG_VALUE, Constants::MAX_ANALOG_VALUE, 0, Constants::MAX_ANALOG_VALUE);
         if (mappedFromNullUpToOne<=DEAD_ZONE_VALUE) {

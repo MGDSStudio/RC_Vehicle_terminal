@@ -42,13 +42,17 @@ MovementController::MovementController() {
     this->wheelBackwardRight.setPinBackward(new ReleasePinSoftware(pinNumberRightRearBackward));
     this->wheelBackwardRight.setHardwarePinBackward(new ReleasePinHardware(pinNumberRightRearBackward));
     //WheelActor* wheelForwardLeft, WheelActor* wheelForwardRight, WheelActor* wheelBackwardLeft, WheelActor* wheelBackwardRight
-    this->wheelSignalsCalculator = new WheelsSignalsCalculatorSimple(&wheelForwardLeft, &wheelForwardRight, &wheelBackwardLeft, &wheelBackwardRight);
+    this->wheelSignalsCalculatorDigital = new WheelsSignalsCalculatorDigital(&wheelForwardLeft, &wheelForwardRight, &wheelBackwardLeft, &wheelBackwardRight);
+    this->wheelSignalsCalculatorAnalog = new WheelsSignalsCalculatorAnalog(&wheelForwardLeft, &wheelForwardRight, &wheelBackwardLeft, &wheelBackwardRight);
     LocalCommandsListenersObserverSingleton::getInstance().subscribe(this);
     Logger::debug("Movement controller init successfully");
 }
 
 MovementController::~MovementController() {
-    delete wheelSignalsCalculator;
+    delete wheelSignalsCalculatorDigital;
+    delete wheelSignalsCalculatorAnalog;
+    wheelSignalsCalculatorAnalog = nullptr;
+    wheelSignalsCalculatorDigital = nullptr;
 }
 
 
@@ -58,53 +62,37 @@ void MovementController::complete() {
 
 void MovementController::updateMovementAnalog(float value) const
 {
-
-    /*if (inDeadZone(value)) wh
-
-    if (value>=0.0) wheelSignalsCalculator->applyMoveForward(value);
-    else wheelSignalsCalculator->applyMoveBackward((-1*value));*/
+    wheelSignalsCalculatorAnalog->
 }
 
 void MovementController::updateRotationAnalog(float value) const
 {
-    if (value<=0) wheelSignalsCalculator->applyRotationCcw(-1*value);
-    else wheelSignalsCalculator->applyRotationCw((value));
+    if (value<=0) wheelSignalsCalculatorDigital->applyRotationCcw(-1*value);
+    else wheelSignalsCalculatorDigital->applyRotationCw((value));
 }
 
 
 void MovementController::onCommandReceived(const LocalCommand &local_command) {
     auto prefix = local_command.getPrefix();
-    if (prefix == LocalCommandPrefix::MOVEMENT_ANALOG)
+    if (prefix == LocalCommandPrefix::PREFIX_MOVEMENT_ANALOG)
     {
         updateMovementAnalog(local_command.getFloatValue());
     }
-    else if (prefix == LocalCommandPrefix::ROTATION_ANALOG)
+    else if (prefix == LocalCommandPrefix::PREFIX_ROTATION_ANALOG)
     {
         updateRotationAnalog(local_command.getFloatValue());
     }
-    else if (prefix == LocalCommandPrefix::MOVEMENT_FORWARD || prefix == LocalCommandPrefix::MOVEMENT_BACKWARD){
-        float valueFromMinusOneToOne = local_command.getFloatValue();
-        if (inDeadZone(valueFromMinusOneToOne)) {
-            wheelSignalsCalculator->stopAll();
-        }
-        else if (valueFromMinusOneToOne > 0){
-            wheelSignalsCalculator->applyMoveForward(valueFromMinusOneToOne);
-        }
-        else {
-            wheelSignalsCalculator->applyMoveBackward(valueFromMinusOneToOne);
-        }
+    else if (prefix == LocalCommandPrefix::PREFIX_MOVEMENT_FORWARD || prefix == LocalCommandPrefix::PREFIX_MOVEMENT_BACKWARD){
+        bool pressed = local_command.getBool();
+        if (!pressed) wheelSignalsCalculatorDigital->stopAll();
+        if (prefix == LocalCommandPrefix::PREFIX_MOVEMENT_FORWARD) wheelSignalsCalculatorDigital->applyMoveForward();
+        else wheelSignalsCalculatorDigital->applyMoveBackward();
     }
-    else if (prefix == LocalCommandPrefix::ROTATION_CW || prefix == LocalCommandPrefix::ROTATION_CCW) {
-        float value = local_command.getFloatValue();
-        if (inDeadZone(value)) {
-            wheelSignalsCalculator->stopAll();
-        }
-        else if (value > 0){
-            wheelSignalsCalculator->applyRotationCw();
-        }
-        else {
-            wheelSignalsCalculator->applyRotationCcw();
-        }
+    else if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CW || prefix == LocalCommandPrefix::PREFIX_ROTATION_CCW) {
+        bool pressed = local_command.getBool();
+        if (!pressed) wheelSignalsCalculatorDigital->stopAll();
+        if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CW) wheelSignalsCalculatorDigital->applyRotationCw();
+        else wheelSignalsCalculatorDigital->applyRotationCcw();
     }
     else {
         //auto val = global_command.getPrefix();

@@ -27,7 +27,10 @@ file(GLOB_RECURSE SOURCES
 
 add_executable(RC_Vehicle_terminal ${SOURCES}
         src/CompletionController.cpp
-        src/CompletionController.h)
+        src/CompletionController.h
+        src/gpio/IWheelsSignalsCalculator.h
+        src/gpio/WheelsSignalsCalculatorAnalog.cpp
+        src/gpio/WheelsSignalsCalculatorAnalog.h)
 
 # 3. Привязываем найденную в системе SDL3
 target_link_libraries(RC_Vehicle_terminal PRIVATE SDL3::SDL3)

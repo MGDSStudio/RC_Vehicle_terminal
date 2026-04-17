@@ -27,7 +27,7 @@ void CompletionController::complete()
 
 void CompletionController::onCommandReceived(const LocalCommand& local_command)
 {
-   if (local_command.getPrefix() == LocalCommandPrefix::SWITCH_OFF || local_command.getPrefix() == LocalCommandPrefix::PAUSE){
+   if (local_command.getPrefix() == LocalCommandPrefix::PREFIX_SWITCH_OFF || local_command.getPrefix() == LocalCommandPrefix::PREFIX_PAUSE){
         *completeFlagInputLevel = true;
    }
 }

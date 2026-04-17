@@ -11,10 +11,10 @@
 #include "IUpdateable.h"
 #include "gpio/SinglePinActor.h"
 #include "gpio/WheelActor.h"
-#include "gpio/WheelsSignalsCalculatorSimple.h"
+#include "gpio/WheelsSignalsCalculatorDigital.h"
 #include "gpio/ReleasePinHardware.h"
 #include "gpio/ReleasePinSoftware.h"
-
+#include "gpio/WheelsSignalsCalculatorAnalog.h"
 
 
 class MovementController : public IUpdateable, LocalCommandsListener{
@@ -36,7 +36,8 @@ private:
     WheelActor wheelForwardRight;
     WheelActor wheelBackwardLeft;
     WheelActor wheelBackwardRight;
-    WheelsSignalsCalculatorSimple* wheelSignalsCalculator;
+    WheelsSignalsCalculatorDigital* wheelSignalsCalculatorDigital;
+    WheelsSignalsCalculatorAnalog* wheelSignalsCalculatorAnalog;
     inline static const float DEAD_ZONE_MIN = -0.075;   //can be avoided - it was mapped in gamepad controller
     inline static const float DEAD_ZONE_MAX = 0.075; //can be avoided - it was mapped in gamepad controller
     static bool inDeadZone(const float val) {

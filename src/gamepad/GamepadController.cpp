@@ -50,7 +50,7 @@ bool GamepadController::isConnectionEvent(SDL_Event* event)
 
 bool GamepadController::isInputEvent(SDL_Event* event)
 {
-    //auto type = event->type;
+
     return (event->type == SDL_EVENT_GAMEPAD_BUTTON_DOWN || event->type == SDL_EVENT_GAMEPAD_BUTTON_UP || event->type == SDL_EVENT_GAMEPAD_AXIS_MOTION);
 }
 
@@ -97,7 +97,7 @@ void GamepadController::updateButtonPressed(SDL_Event* event, LocalCommand* loca
 {
     const auto localPrefix = getPrefixForButton(event->gbutton.button);
     local_command->setPrefix(localPrefix);
-    local_command->setFloatValue(Constants::MAX_ANALOG_VALUE);
+    local_command->setFloatValue(Constants::MAX_ANALOG_VALUE);  //Not important
     local_command->setBoolValue(true);
 }
 
@@ -105,7 +105,7 @@ void GamepadController::updateButtonReleased(SDL_Event* event, LocalCommand* loc
 {
     const auto localPrefix = getPrefixForButton(event->gbutton.button);
     local_command->setPrefix(localPrefix);
-    local_command->setFloatValue(Constants::NEUTRAL_ANALOG_VALUE);
+    local_command->setFloatValue(Constants::NEUTRAL_ANALOG_VALUE);  //Not important
     local_command->setBoolValue(false);
 }
 
@@ -135,19 +135,15 @@ LocalCommandPrefix GamepadController::getPrefixForAxis(const SDL_GamepadAxis& ga
     {
         if (name == MOVEMENT_ANALOG)
         {
-            local_command_prefix = LocalCommandPrefix::MOVEMENT_ANALOG;
-            //if (value>0) local_command_prefix = LocalCommandPrefix::MOVEMENT_FORWARD;
-            //else local_command_prefix = LocalCommandPrefix::MOVEMENT_BACKWARD;
+            local_command_prefix = LocalCommandPrefix::PREFIX_MOVEMENT_ANALOG;
         }
         else if (name == ROTATION_ANALOG)
         {
-            local_command_prefix = LocalCommandPrefix::ROTATION_ANALOG;
-            //if (value>0) local_command_prefix = LocalCommandPrefix::ROTATION_CW;
-            //else local_command_prefix = LocalCommandPrefix::ROTATION_CCW;
+            local_command_prefix = LocalCommandPrefix::PREFIX_ROTATION_ANALOG;
         }
         else if (name == BUZZER_ANALOG)
         {
-            local_command_prefix = LocalCommandPrefix::NOISE_ANALOG;
+            local_command_prefix = LocalCommandPrefix::PREFIX_NOISE_ANALOG;
         }
         else
         {
@@ -163,32 +159,32 @@ LocalCommandPrefix GamepadController::getPrefixForButton(uint8_t buttonCode)
     auto local_command_prefix = LocalCommandPrefix::NO_DATA;
     if (name != NO_DATA) {
         if (name == BUZZER_DIGITAL) {
-            local_command_prefix = LocalCommandPrefix::NOISE_DIGITAL;
+            local_command_prefix = LocalCommandPrefix::PREFIX_NOISE_DIGITAL;
         }
         else if (name == SWITCH_OFF) {
-            local_command_prefix = LocalCommandPrefix::SWITCH_OFF;
+            local_command_prefix = LocalCommandPrefix::PREFIX_SWITCH_OFF;
             //if (this->completeFlagInputLevel != nullptr) {
                 *this->completeFlagInputLevel = true;
             //}
         }
         else if (name == PAUSE) {
-            local_command_prefix = LocalCommandPrefix::PAUSE;
+            local_command_prefix = LocalCommandPrefix::PREFIX_PAUSE;
         }
         else if (name == MOVE_FORWARD_DIGITAL)
         {
-            local_command_prefix = LocalCommandPrefix::MOVEMENT_FORWARD;
+            local_command_prefix = LocalCommandPrefix::PREFIX_MOVEMENT_FORWARD;
         }
         else if (name == MOVE_BACKWARD_DIGITAL)
         {
-            local_command_prefix = LocalCommandPrefix::MOVEMENT_BACKWARD;
+            local_command_prefix = LocalCommandPrefix::PREFIX_MOVEMENT_BACKWARD;
         }
         else if (name == ROTATE_CCW_DIGITAL)
         {
-            local_command_prefix = LocalCommandPrefix::ROTATION_CCW;
+            local_command_prefix = LocalCommandPrefix::PREFIX_ROTATION_CCW;
         }
         else if (name == ROTATE_CW_DIGITAL)
         {
-            local_command_prefix = LocalCommandPrefix::ROTATION_CW;
+            local_command_prefix = LocalCommandPrefix::PREFIX_ROTATION_CW;
         }
     }
     return local_command_prefix;
