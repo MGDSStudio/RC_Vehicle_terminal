@@ -10,7 +10,7 @@ std::string getTime();
 
 MainController main_controller;
 
-bool tests = true;
+bool tests = false;
 
 int main(int argc, char* argv[]) {
     Logger::debug("App launched at: " + getTime());
