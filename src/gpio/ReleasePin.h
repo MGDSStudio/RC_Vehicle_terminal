@@ -17,7 +17,7 @@ public:
         this->debugPrefixName = (prefix +  + " " + std::to_string(pinNumber) + ": ");
     }
     virtual ~ReleasePin() = default;
-    virtual void setValue(float value) = 0;
+    virtual void ssetValue(float value) = 0;
     virtual void enable(bool flag) = 0;
     virtual void complete() = 0;
 private:

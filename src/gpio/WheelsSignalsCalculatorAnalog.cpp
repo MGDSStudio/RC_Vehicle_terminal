@@ -25,14 +25,14 @@ void WheelsSignalsCalculatorAnalog::update()
     if (enableAnalogControl)
     {
         bool wasUpdated = this->stick_controller.updateDataStruct(&wheels_control_data_struct);
-        //if (wasUpdated){
+        if (wasUpdated){
             if (!testing) {
                 setValue(wheels_control_data_struct.frontLeft, wheelForwardLeft);
                 setValue(wheels_control_data_struct.frontRight, wheelForwardRight);
                 setValue(wheels_control_data_struct.rearLeft, wheelBackwardLeft);
                 setValue(wheels_control_data_struct.rearRight, wheelBackwardRight);
             }
-        //}
+        }
     }
 }
 
@@ -40,7 +40,7 @@ void WheelsSignalsCalculatorAnalog::setValue(float value, WheelActor* wheel_acto
 {
     if ( value>DEAD_ZONE_MAX)
     {
-        wheel_actor->setForward(wheels_control_data_struct.frontLeft);
+        wheel_actor->setForward(value);
     }
     else if ( value<DEAD_ZONE_MIN)
     {
