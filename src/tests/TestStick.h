@@ -13,7 +13,7 @@ public:
     TestStick() {
         WheelsSignalsCalculatorAnalog wheels_signals_calculator_analog;
         wheels_signals_calculator_analog.applyMovement(1);
-        wheels_signals_calculator_analog.applyRotation(0.01);
+        wheels_signals_calculator_analog.applyRotation(0.1);
         wheels_signals_calculator_analog.update();
         Logger::debug("Test place: " + wheels_signals_calculator_analog.get_text_representation());
     }

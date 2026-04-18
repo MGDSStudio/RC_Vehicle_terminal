@@ -87,6 +87,7 @@ private:
     bool previousPlaceInDeadZone = true;
     bool actualPlaceInDeadZone = false;
     bool placeWasUpdated = false;
+    bool firstInit = true;
 
     static void log(std::string msg)
     {
@@ -144,7 +145,10 @@ private:
     void validateAndCorrect(bool whatChanged)
     {
         updateCoordinates();
-        updateAngle(whatChanged);
+        if (!firstInit) {
+            updateAngle(whatChanged);
+        }
+        firstInit = false;
     }
 
 
