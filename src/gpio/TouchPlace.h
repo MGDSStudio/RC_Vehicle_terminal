@@ -80,7 +80,11 @@ public:
     }
 
     float getRadius() const {
-        return GeometrieLibrary::dist(0,0,actualX, actualY);
+        float rad = GeometrieLibrary::dist(0,0,actualX, actualY);
+        if (rad > 1) {
+            rad =  1;
+        }
+        return rad;
     }
 
 private:
@@ -110,7 +114,7 @@ private:
     {
         if (debug)
         {
-            Logger::custom("TouchPlace", msg);
+            Logger::custom("TOUCH_PLACE:", msg);
         }
     }
 
@@ -166,7 +170,7 @@ private:
         }
         else {
             if (debug){
-                log("New value was validated successfully");
+                log(" value was validated successfully. It is not in dead zone");
 
             }
             return UPDATED;

@@ -21,6 +21,7 @@ public:
 
     WheelsSignalsCalculatorAnalog() : IWheelsSignalsCalculator() {
         Logger::debug("Test launched at WheelsSignalsCalculatorAnalog");
+        testing = true;
     }
 
     ~WheelsSignalsCalculatorAnalog() override = default;
@@ -50,6 +51,7 @@ public:
 
 
 private:
+    inline static bool testing = false;
     inline static bool enableAnalogControl = true;
     inline static bool debug = true;
     inline static float DEAD_ZONE_MAX = 0.05f;

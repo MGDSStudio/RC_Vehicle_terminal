@@ -12,7 +12,7 @@ class TestStick {
 public:
     TestStick() {
 
-        test(0.85, 1);
+        test(0.0, 0.5);
         test(0.7, 1);
         test(0.1, 1);
 

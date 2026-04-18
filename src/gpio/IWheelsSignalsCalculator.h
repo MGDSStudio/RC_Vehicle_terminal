@@ -18,12 +18,13 @@ public:
         this->wheelBackwardRight = wheelBackwardRight;
     }
 
-    IWheelsSignalsCalculator() {
-        /*this->wheelForwardLeft = wheelForwardLeft;
-        this->wheelForwardRight = wheelForwardRight;
-        this->wheelBackwardLeft = wheelBackwardLeft;
-        this->wheelBackwardRight = wheelBackwardRight;*/
-    }
+    IWheelsSignalsCalculator() = default;
+/*
+    *this->wheelForwardLeft = wheelForwardLeft;
+    this->wheelForwardRight = wheelForwardRight;
+    this->wheelBackwardLeft = wheelBackwardLeft;
+    this->wheelBackwardRight = wheelBackwardRight;
+    */
 
     virtual ~IWheelsSignalsCalculator() = default;
 
@@ -35,10 +36,10 @@ public:
     }
 
 protected:
-    WheelActor* wheelForwardLeft;
-    WheelActor* wheelForwardRight;
-    WheelActor* wheelBackwardLeft;
-    WheelActor* wheelBackwardRight;
+    WheelActor* wheelForwardLeft = nullptr;
+    WheelActor* wheelForwardRight = nullptr;
+    WheelActor* wheelBackwardLeft = nullptr;
+    WheelActor* wheelBackwardRight = nullptr;
 };
 
 
