@@ -23,7 +23,7 @@ public:
 
     static constexpr float MIN_EFFECTIVE_PWM_VALUE_FOR_MAX_VALUE = 0;
     static constexpr float MAX_EFFECTIVE_PWM_VALUE_FOR_MIN_VALUE = 190;
-    static constexpr float MIN_EFFECTIVE_ANALOG_VALUE = 0.35;
+    static constexpr float MIN_EFFECTIVE_ANALOG_VALUE = 0.3;
 };
 
 

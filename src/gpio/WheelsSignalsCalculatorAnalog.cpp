@@ -40,11 +40,11 @@ void WheelsSignalsCalculatorAnalog::setValue(float value, WheelActor* wheel_acto
 {
     if ( value>DEAD_ZONE_MAX)
     {
-        wheel_actor->setForward(value);
+        wheel_actor->setBackward(value);
     }
     else if ( value<DEAD_ZONE_MIN)
     {
-        wheel_actor->setBackward(-value);
+        wheel_actor->setForward(-value);
     }
     else wheel_actor->stop();
 }

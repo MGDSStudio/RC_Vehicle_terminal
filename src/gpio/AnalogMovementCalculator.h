@@ -18,7 +18,7 @@ public:
         auto quarter = QuarterUtil::getForAngle(angle);
         float mappedAngle = QuarterUtil::getRangeFromNullToOne(angle, quarter);
         float mappedVelociy;
-        if (radiusFromNullToOne<MIN_ANALOG_VALUE_FOR_WHEEL) mappedVelociy = MIN_ANALOG_VALUE_FOR_WHEEL;
+        if (radiusFromNullToOne<MIN_ANALOG_VALUE_FOR_WHEEL) mappedVelociy = 0;
         else mappedVelociy = GeometrieLibrary::map(radiusFromNullToOne, 0, 1, MIN_ANALOG_VALUE_FOR_WHEEL, MAX_ANALOG_VALUE_FOR_WHEEL);
         float maxVelocity = mappedVelociy;
         float minVelocity = mappedVelociy*mappedAngle;
