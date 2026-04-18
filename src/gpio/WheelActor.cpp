@@ -4,6 +4,10 @@
 
 #include "WheelActor.h"
 
+inline static bool isRpi = false;
+#ifdef IS_RPI
+    isRpi = true;
+#endif
 
 WheelActor::WheelActor() {
 
@@ -11,24 +15,31 @@ WheelActor::WheelActor() {
 
 
 void WheelActor::setForward(float relativeValue) {
-    softwarePinForward->setValue(relativeValue);
-    softwarePinBackward->enable(false);
+    if (!isRpi) {
+        softwarePinForward->setValue(relativeValue);
+        softwarePinBackward->enable(false);
+    }
     hardwarePinForward->setValue(relativeValue);
     hardwarePinBackward->enable(false);
     this->direction = relativeValue;
 }
 
 void WheelActor::setBackward(float relativeValue) {
-    softwarePinForward->enable(false);
-    softwarePinBackward->setValue(relativeValue);
+    if (!isRpi) {
+        softwarePinForward->enable(false);
+        softwarePinBackward->setValue(relativeValue);
+    }
+
     hardwarePinForward->enable(false);
     hardwarePinBackward->setValue(relativeValue);
     this->direction = relativeValue;
 }
 
 void WheelActor::stop() {
-    softwarePinForward->enable(false);
-    softwarePinBackward->enable(false);
+    if (!isRpi) {
+        softwarePinForward->enable(false);
+        softwarePinBackward->enable(false);
+    }
     hardwarePinForward->enable(false);
     hardwarePinBackward->enable(false);
     this->direction = 0;
@@ -36,17 +47,25 @@ void WheelActor::stop() {
 
 void WheelActor::setForward()
 {
-    softwarePinForward->enable(true);
+    if (!isRpi) {
+        softwarePinForward->enable(true);
+        softwarePinBackward->enable(false);
+    }
+
     hardwarePinForward->enable(true);
-    softwarePinBackward->enable(false);
+
     hardwarePinBackward->enable(false);
 }
 
 void WheelActor::setBackward()
 {
-    softwarePinForward->enable(false);
+    if (!isRpi) {
+        softwarePinForward->enable(false);
+        softwarePinBackward->enable(true);
+    }
+
     hardwarePinForward->enable(false);
-    softwarePinBackward->enable(true);
+
     hardwarePinBackward->enable(true);
 }
 
