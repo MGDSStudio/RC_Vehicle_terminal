@@ -42,10 +42,10 @@ private:
     constexpr static int ENABLE_PIN = 0;
     constexpr static int DISABLE_PIN = 1;
     const std::string DEBUG_TEXT_PREFIX = "HARDWARE_PIN";
-    const int ENABLED_PWM_VALUE = 0;
-    const int DISABLED_PWM_VALUE = 255;
-    const int NOT_WORKING_PWM_VALUE = 190;
-    int mapForPwm(float fromMinusOneUpToOne);
+    const float ENABLED_PWM_VALUE = 0;
+    const float DISABLED_PWM_VALUE = 255;
+    const float NOT_WORKING_PWM_VALUE = 190;
+    int mapForPwm(float fromNullToOne);
 };
 
 

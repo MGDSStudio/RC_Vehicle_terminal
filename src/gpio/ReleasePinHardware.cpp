@@ -4,6 +4,8 @@
 
 #include "ReleasePinHardware.h"
 
+#include "../libs/GeometrieLibrary.h"
+
 /*
 ReleasePinHardware::ReleasePinHardware(int pinNumber)
 {
@@ -24,22 +26,10 @@ void ReleasePinHardware::enable(bool flag)
     #ifdef IS_RPI
         if (flag){
             gpioWrite(pinNumber, ENABLE_PIN);
-            //gpioWrite(17, ENABLE_PIN);
-            //gpioWrite(5, ENABLE_PIN);
-            //gpioWrite(27, ENABLE_PIN);
-            //gpioWrite(20, ENABLE_PIN);
-
-            //gpioPWM(pinNumber, ENABLED_PWM_VALUE);
             log("high level was set");
         }
         else {
             gpioWrite(pinNumber, DISABLE_PIN);
-
-            //gpioWrite(17, DISABLE_PIN);
-            //gpioWrite(5, DISABLE_PIN);
-            //gpioWrite(27, DISABLE_PIN);
-            //gpioWrite(20, DISABLE_PIN);
-            //gpioPWM(pinNumber, DISABLED_PWM_VALUE);
             log("low level was set");
         }
     #endif
@@ -53,11 +43,9 @@ void ReleasePinHardware::complete()
     #endif
 }
 
-int ReleasePinHardware::mapForPwm(float fromMinusOneUpToOne){
-    float ostart = -1;
-    float ostop = 1;
-    float istart = ENABLED_PWM_VALUE;
-    float istop = DISABLED_PWM_VALUE;
-    float mapped = ostart + (ostop - ostart) * ((fromMinusOneUpToOne - istart) / (istop - istart));
-    return (int)mapped;
+int ReleasePinHardware::mapForPwm(float fromNullToOne){
+    fromNullToOne = 1-fromNullToOne;
+    float mapped = GeometrieLibrary::map(fromNullToOne, 0, 1, DISABLED_PWM_VALUE, ENABLED_PWM_VALUE);
+    //float mapped = ostart + (ostop - ostart) * ((fromMinusOneUpToOne - istart) / (istop - istart));
+    return (int)ENABLED_PWM_VALUE-mapped;
 }
