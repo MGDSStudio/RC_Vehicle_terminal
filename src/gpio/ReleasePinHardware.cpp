@@ -49,5 +49,5 @@ int ReleasePinHardware::mapForPwm(float fromNullToOne){
     float mapped = GeometrieLibrary::map(fromNullToOne, 0, 1,  ENABLED_PWM_VALUE, DISABLED_PWM_VALUE);
     mapped = DISABLED_PWM_VALUE-mapped;
     //float mapped = ostart + (ostop - ostart) * ((fromMinusOneUpToOne - istart) / (istop - istart));
-    return (int)ENABLED_PWM_VALUE-mapped;
+    return (int)(mapped);
 }
