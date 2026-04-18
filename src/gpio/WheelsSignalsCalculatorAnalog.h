@@ -30,13 +30,14 @@ public:
     void applyRotation(float valueBetweenMinusOneAndOne);
     void setValue(float value, WheelActor* wheel_actor) const;
     void update();
+
     WheelsControlDataStruct get_wheels_control_data_struct_test_only() const {
         return wheels_control_data_struct;
     }
 
     std::string get_text_representation() {
         std::string  text;
-        text+="Frong left:";
+        text+="Front left:";
         text+=std::to_string(wheels_control_data_struct.frontLeft);
         text+="; Front right:";
         text+=std::to_string(wheels_control_data_struct.frontRight);
@@ -46,6 +47,7 @@ public:
         text+=std::to_string(wheels_control_data_struct.rearRight);
         return text;
     }
+
 
 private:
     inline static bool enableAnalogControl = true;

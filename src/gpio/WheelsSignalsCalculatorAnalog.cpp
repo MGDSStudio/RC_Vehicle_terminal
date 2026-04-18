@@ -24,11 +24,13 @@ void WheelsSignalsCalculatorAnalog::update()
 {
     if (enableAnalogControl)
     {
-        this->stick_controller.updateDataStruct(&wheels_control_data_struct);
-        setValue(wheels_control_data_struct.frontLeft, wheelForwardLeft);
-        setValue(wheels_control_data_struct.frontRight, wheelForwardRight);
-        setValue(wheels_control_data_struct.rearLeft, wheelBackwardLeft);
-        setValue(wheels_control_data_struct.rearRight, wheelBackwardRight);
+        bool wasUpdated = this->stick_controller.updateDataStruct(&wheels_control_data_struct);
+        if (wasUpdated){
+            setValue(wheels_control_data_struct.frontLeft, wheelForwardLeft);
+            setValue(wheels_control_data_struct.frontRight, wheelForwardRight);
+            setValue(wheels_control_data_struct.rearLeft, wheelBackwardLeft);
+            setValue(wheels_control_data_struct.rearRight, wheelBackwardRight);
+        }
     }
 }
 

@@ -74,8 +74,6 @@ void MovementController::updateRotationAnalog(float value) const
     wheelSignalsCalculatorAnalog->applyRotation(value);
 }
 
-
-
 void MovementController::onCommandReceived(const LocalCommand &local_command) {
     auto prefix = local_command.getPrefix();
     if (prefix == LocalCommandPrefix::PREFIX_MOVEMENT_ANALOG)

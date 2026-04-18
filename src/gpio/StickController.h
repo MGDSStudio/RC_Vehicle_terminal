@@ -21,18 +21,23 @@ public:
         touch_place.setX(x);
     }
 
-    void setY(float x)
+    void setY(float y)
     {
-        touch_place.setX(x);
+        touch_place.setY(y);
     }
 
-    void updateDataStruct(WheelsControlDataStruct* wheels_control_data_struct)
+    bool updateDataStruct(WheelsControlDataStruct* wheels_control_data_struct)
     {
         if (touch_place.wasPlaceUpdated())
         {
             float angle = touch_place.getAngle();
             float radius = touch_place.getRadius();
             analog_movement_calculator.updateDataStruct(wheels_control_data_struct, angle,radius);
+            return true;
+        }
+        else {
+            Logger::debug("touch place is same");
+            return false;
         }
     }
 
