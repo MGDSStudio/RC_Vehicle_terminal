@@ -65,7 +65,7 @@ public:
                 whatChanged = WhatChanged::X;
                 xWasUpdated = false;
             }
-            else if (yWasUpdated){
+            else {
                 whatChanged = WhatChanged::Y;
                 yWasUpdated = false;
             }
@@ -166,7 +166,8 @@ private:
         if (actualPlaceInDeadZone)
         {
             resetValues(whatChanged);
-            return NOT_UPDATED;
+            return UPDATED;
+            //return NOT_UPDATED;
         }
         else {
             if (debug){
@@ -183,6 +184,7 @@ private:
         if (!firstInit) {
             updateAngle(whatChanged);
         }
+        else updateAngle(whatChanged);
         firstInit = false;
     }
 };
