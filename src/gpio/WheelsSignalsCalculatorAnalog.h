@@ -54,7 +54,7 @@ private:
     inline static bool testing = false;
     inline static bool enableAnalogControl = true;
     inline static bool debug = true;
-    inline static float DEAD_ZONE_MAX = 0.05f;
+    inline static float DEAD_ZONE_MAX = 0.15f;
     inline static float DEAD_ZONE_MIN = -DEAD_ZONE_MAX;
     WheelsControlDataStruct wheels_control_data_struct;
     StickController stick_controller;
