@@ -48,7 +48,7 @@ void ReleasePinHardware::complete()
 {
     #ifdef IS_RPI
         gpioWrite(pinNumber, DISABLE_PIN);
-        log("completed. Pin PWM-value set to " + std::to_string(DISABLED_PWM_VALUE));
+        log("completed. Pin was disabled");
     #endif
 }
 
