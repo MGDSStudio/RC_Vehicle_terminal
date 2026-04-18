@@ -4,9 +4,10 @@
 
 #include "WheelActor.h"
 
-inline static bool isRpi = false;
 #ifdef IS_RPI
-    isRpi = true;
+    inline static bool isRpi = true;
+#else
+inline static bool isRpi = false;
 #endif
 
 WheelActor::WheelActor() {
