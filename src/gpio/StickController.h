@@ -36,7 +36,7 @@ public:
             return true;
         }
         else {
-            Logger::debug("touch place is same");
+            //Logger::debug("touch place is same");
             return false;
         }
     }
