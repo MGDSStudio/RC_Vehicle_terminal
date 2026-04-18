@@ -15,7 +15,7 @@ void ReleasePinHardware::setValue(float value)
     #ifdef IS_RPI
         float mapped = mapForPwm(value);
         gpioPWM(pinNumber, mapped);
-        log("PWM " + std::to_string(mapped)+ " was set");
+        log("PWM " + std::to_string(mapped)+ " was set for raw value: " + std::to_string(value));
     #endif
 }
 
