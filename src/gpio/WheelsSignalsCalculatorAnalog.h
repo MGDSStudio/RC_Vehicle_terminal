@@ -19,6 +19,10 @@ public:
 
     }
 
+    WheelsSignalsCalculatorAnalog() : IWheelsSignalsCalculator() {
+        Logger::debug("Test launched at WheelsSignalsCalculatorAnalog");
+    }
+
     ~WheelsSignalsCalculatorAnalog() override = default;
 
     void applyMovement(float valueBetweenMinusOneAndOne);
@@ -26,9 +30,25 @@ public:
     void applyRotation(float valueBetweenMinusOneAndOne);
     void setValue(float value, WheelActor* wheel_actor) const;
     void update();
+    WheelsControlDataStruct get_wheels_control_data_struct_test_only() const {
+        return wheels_control_data_struct;
+    }
+
+    std::string get_text_representation() {
+        std::string  text;
+        text+="Frong left:";
+        text+=std::to_string(wheels_control_data_struct.frontLeft);
+        text+="; Front right:";
+        text+=std::to_string(wheels_control_data_struct.frontRight);
+        text+="; Rear left:";
+        text+=std::to_string(wheels_control_data_struct.rearLeft);
+        text+="; Rear right:";
+        text+=std::to_string(wheels_control_data_struct.rearRight);
+        return text;
+    }
 
 private:
-    inline static bool enableAnalogControl = false;
+    inline static bool enableAnalogControl = true;
     inline static bool debug = true;
     inline static float DEAD_ZONE_MAX = 0.05f;
     inline static float DEAD_ZONE_MIN = -DEAD_ZONE_MAX;

@@ -30,7 +30,9 @@ public:
     {
         if (touch_place.wasPlaceUpdated())
         {
-            analog_movement_calculator.updateDataStruct(wheels_control_data_struct, 1,1);
+            float angle = touch_place.getAngle();
+            float radius = touch_place.getRadius();
+            analog_movement_calculator.updateDataStruct(wheels_control_data_struct, angle,radius);
         }
     }
 

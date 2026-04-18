@@ -7,6 +7,8 @@
 #include <cmath>
 
 
+
+
 class GeometrieLibrary {
 
 public:
@@ -40,7 +42,23 @@ public:
         return angleDeg(dx, dy);
     }
 
+    static float getAngle(double x, float y) {
+        return std::atan2(y, x);
+    }
 
+    static float getAngleDegrees(double x, float y) {
+        float radians = std::atan2(y, x);
+        float degrees = radians * (180.0 / M_PI);
+        return (degrees < 0) ? (degrees + 360.0) : degrees;
+    }
+
+    static float dist(float startX, float startY, float endX, float endY) {
+        float dx = endX - startX;
+        float dy = endY - startY;
+
+        // 2. Return the square root of the sum of squares
+        return std::sqrt(dx * dx + dy * dy);
+    }
 
 private:
         static float angleDeg(float x, float y) {

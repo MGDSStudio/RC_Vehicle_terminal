@@ -34,7 +34,12 @@ add_executable(RC_Vehicle_terminal ${SOURCES}
         src/preferences/WheelMovementDataStruct.h
         src/gpio/WheelsControlDataStruct.h
         src/gpio/AnalogMovementCalculator.cpp
-        src/gpio/AnalogMovementCalculator.h)
+        src/gpio/AnalogMovementCalculator.h
+        src/gamepad/InputConstants.h
+        src/libs/Quarter.h
+        src/libs/TwoValuesStruct.h
+        src/tests/TestStick.cpp
+        src/tests/TestStick.h)
 
 # 3. Привязываем найденную в системе SDL3
 target_link_libraries(RC_Vehicle_terminal PRIVATE SDL3::SDL3)

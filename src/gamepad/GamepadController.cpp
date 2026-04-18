@@ -4,7 +4,7 @@
 
 #include "GamepadController.h"
 
-#include "../GeometrieLibrary.h"
+#include "../libs/GeometrieLibrary.h"
 #include "../LocalCommandsListenersObserverSingleton.h"
 
 GamepadController::GamepadController() {

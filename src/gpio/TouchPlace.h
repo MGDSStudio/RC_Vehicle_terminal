@@ -6,7 +6,7 @@
 #define CMAKESFMLPROJECT_TOUCHPLACE_H
 
 
-#include "../GeometrieLibrary.h"
+#include "../libs/GeometrieLibrary.h"
 #include "../Logger.h"
 
 class TouchPlace
@@ -58,6 +58,14 @@ public:
             return true;
         }
         else return placeWasUpdated;
+    }
+
+    float getAngle() const {
+        return GeometrieLibrary::getAngleDegrees(actualX, actualY);
+    }
+
+    float getRadius() const {
+        return GeometrieLibrary::dist(0,0,actualX, actualY);
     }
 
 private:

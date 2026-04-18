@@ -5,16 +5,54 @@
 #ifndef RC_VEHICLE_TERMINAL_ANALOGMOVEMENTCALCULATOR_H
 #define RC_VEHICLE_TERMINAL_ANALOGMOVEMENTCALCULATOR_H
 #include "WheelsControlDataStruct.h"
+#include "../Constants.h"
+#include "../libs/Quarter.h"
 
 
 class AnalogMovementCalculator
 {
 
 public:
-    void updateDataStruct(WheelsControlDataStruct* wheels_control_data_struct, float angle, float radiusFromOneToOne)
+    void updateDataStruct(WheelsControlDataStruct* wheels_control_data_struct, float angle, float radiusFromNullToOne)
     {
+        auto quarter = QuarterUtil::getForAngle(angle);
+        float mappedAngle = QuarterUtil::getRangeFromNullToOne(angle, quarter);
+        float mappedVelociy;
+        if (radiusFromNullToOne<MIN_ANALOG_VALUE_FOR_WHEEL) mappedVelociy = MIN_ANALOG_VALUE_FOR_WHEEL;
+        else mappedVelociy = GeometrieLibrary::map(radiusFromNullToOne, 0, 1, MIN_ANALOG_VALUE_FOR_WHEEL, MIN_ANALOG_VALUE_FOR_WHEEL);
+        float maxVelocity = mappedVelociy;
+        float minVelocity = mappedVelociy*mappedAngle;
+        if (quarter == Quarter::RIGHT_TOP) {
+            wheels_control_data_struct->frontRight = minVelocity;
+            wheels_control_data_struct->rearRight = minVelocity;
+            wheels_control_data_struct->frontLeft = maxVelocity;
+            wheels_control_data_struct->rearLeft = maxVelocity;
+        }
+        else if (quarter == Quarter::LEFT_TOP) {
+            wheels_control_data_struct->frontRight = maxVelocity;
+            wheels_control_data_struct->rearRight = maxVelocity;
+            wheels_control_data_struct->frontLeft = minVelocity;
+            wheels_control_data_struct->rearLeft = minVelocity;
+        }
+        else if (quarter == Quarter::RIGHT_BOTTOM) {
+            wheels_control_data_struct->frontRight = minVelocity;
+            wheels_control_data_struct->rearRight = minVelocity;
+            wheels_control_data_struct->frontLeft = maxVelocity;
+            wheels_control_data_struct->rearLeft = maxVelocity;
+        }
+        else if (quarter == Quarter::LEFT_BOTTOM) {
+            wheels_control_data_struct->frontRight = maxVelocity;
+            wheels_control_data_struct->rearRight = maxVelocity;
+            wheels_control_data_struct->frontLeft = minVelocity;
+            wheels_control_data_struct->rearLeft = minVelocity;
+        }
+
 
     }
+
+private:
+    constexpr static float MAX_ANALOG_VALUE_FOR_WHEEL = Constants::MAX_ANALOG_VALUE;
+    constexpr static float MIN_ANALOG_VALUE_FOR_WHEEL = Constants::MIN_EFFECTIVE_ANALOG_VALUE;
 };
 
 

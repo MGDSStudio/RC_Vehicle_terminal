@@ -13,7 +13,7 @@
 #include "../IUpdateable.h"
 #include "../Logger.h"
 #include "../LocalCommand.h"
-#include "../GeometrieLibrary.h"
+#include "../libs/GeometrieLibrary.h"
 
 class GamepadController : public IUpdateable, InputController
 {

@@ -18,6 +18,13 @@ public:
         this->wheelBackwardRight = wheelBackwardRight;
     }
 
+    IWheelsSignalsCalculator() {
+        /*this->wheelForwardLeft = wheelForwardLeft;
+        this->wheelForwardRight = wheelForwardRight;
+        this->wheelBackwardLeft = wheelBackwardLeft;
+        this->wheelBackwardRight = wheelBackwardRight;*/
+    }
+
     virtual ~IWheelsSignalsCalculator() = default;
 
     virtual void stopAll() const final {

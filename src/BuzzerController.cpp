@@ -4,7 +4,7 @@
 
 #include "BuzzerController.h"
 
-#include "GeometrieLibrary.h"
+#include "libs/GeometrieLibrary.h"
 #include "LocalCommandsListenersObserverSingleton.h"
 #include "gpio/ReleasePinHardware.h"
 #include "gpio/ReleasePinSoftware.h"
@@ -43,8 +43,7 @@ void BuzzerController::update(float tpf) {
 
 void BuzzerController::onCommandReceived(const LocalCommand& global_command){
     if (global_command.getPrefix() == LocalCommandPrefix::PREFIX_NOISE_DIGITAL){
-        bool enable = global_command.getBool();
-        if (enable){
+        if (bool enable = global_command.getBool()){
             buzzer.enable(true);
             Logger::debug("Buzzer enabled from digital command");
         }
