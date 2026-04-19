@@ -39,8 +39,8 @@ public:
     }
 
 private:
-    inline static Sint16 AXIS_DEAD_ZONE_MAX = 4000;
-    inline static Sint16 AXIS_DEAD_ZONE_MIN = -4000;
+    inline static Sint16 AXIS_DEAD_ZONE_MAX = 2000;
+    inline static Sint16 AXIS_DEAD_ZONE_MIN = -2000;
 
     SDL_Gamepad* gamepad = nullptr;
     GamepadDataStruct gamepad_data_struct;

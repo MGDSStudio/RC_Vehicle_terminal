@@ -16,6 +16,15 @@ enum class Quarter {
 
 class QuarterUtil {
 public:
+
+    static std::string getQuarterName(Quarter quarter) {
+        if (quarter == Quarter::LEFT_BOTTOM) return "LEFT_BOTTOM";
+        else if (quarter == Quarter::RIGHT_BOTTOM) return "RIGHT_BOTTOM";
+        else if (quarter == Quarter::LEFT_TOP) return "LEFT_TOP";
+        else if (quarter == Quarter::RIGHT_TOP) return "RIGHT_TOP";
+        else return "DEAD_ZONE";
+    }
+
     static Quarter getForAngle(const float angle) {
         Quarter quarter;
         if (angle >= InputConstants::STICK_DEAD_ZONE_RIGHT_TOP && angle <= 90) quarter = Quarter::RIGHT_TOP;
@@ -33,17 +42,19 @@ public:
             range = 0.0001;
         }
         else {
+
             if (quarter == Quarter::RIGHT_TOP) {
                 range = GeometrieLibrary::map(angle, InputConstants::STICK_DEAD_ZONE_RIGHT_TOP, 90, 0, 1);
             }
             else if (quarter == Quarter::LEFT_TOP) {
-                range = GeometrieLibrary::map(angle, InputConstants::STICK_DEAD_ZONE_LEFT_TOP, 90, 1,0);
+                range = GeometrieLibrary::map(angle, 90, InputConstants::STICK_DEAD_ZONE_LEFT_TOP, 0,1);
+                range = 1-range;
             }
             else if (quarter == Quarter::LEFT_BOTTOM) {
-                range = GeometrieLibrary::map(angle, InputConstants::STICK_DEAD_ZONE_LEFT_BOTTOM, 90, 0,1);
+                range = GeometrieLibrary::map(angle, InputConstants::STICK_DEAD_ZONE_LEFT_BOTTOM, 270, 0,1);
             }
             else {
-                range = GeometrieLibrary::map(angle, InputConstants::STICK_DEAD_ZONE_RIGHT_BOTTOM, 90, 1,0);
+                range = GeometrieLibrary::map(angle, 280, InputConstants::STICK_DEAD_ZONE_RIGHT_BOTTOM, 1,0);
             }
         }
         return range;

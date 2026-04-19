@@ -9,7 +9,7 @@
 class InputConstants {
 
 public:
-    constexpr static float STICK_DEAD_ZONE_ANGLE = 25;
+    constexpr static float STICK_DEAD_ZONE_ANGLE = 15;
     constexpr static float STICK_DEAD_ZONE_RIGHT_TOP = STICK_DEAD_ZONE_ANGLE/2;
     constexpr static float STICK_DEAD_ZONE_RIGHT_BOTTOM = 360-STICK_DEAD_ZONE_ANGLE/2;
     constexpr static float STICK_DEAD_ZONE_LEFT_TOP = 180-STICK_DEAD_ZONE_ANGLE/2;

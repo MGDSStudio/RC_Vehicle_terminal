@@ -44,7 +44,7 @@ private:
     const std::string DEBUG_TEXT_PREFIX = "HARDWARE_PIN";
     const float ENABLED_PWM_VALUE = 0;
     const float DISABLED_PWM_VALUE = 255;
-    const float NOT_WORKING_PWM_VALUE = 190;
+    const float NOT_WORKING_PWM_VALUE = 210;
     int mapForPwm(float fromNullToOne);
 };
 
