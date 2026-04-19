@@ -141,6 +141,8 @@ LocalCommandPrefix GamepadController::getPrefixForAxis(const SDL_GamepadAxis& ga
         {
             local_command_prefix = LocalCommandPrefix::PREFIX_ROTATION_ANALOG;
         }
+        else if (name == ROTATION_CW_ANALOG) local_command_prefix = LocalCommandPrefix::PREFIX_ROTATION_CW_ANALOG;
+        else if (name == ROTATION_CCW_ANALOG) local_command_prefix = LocalCommandPrefix::PREFIX_ROTATION_CCW_ANALOG;
         else if (name == BUZZER_ANALOG)
         {
             local_command_prefix = LocalCommandPrefix::PREFIX_NOISE_ANALOG;
@@ -180,14 +182,21 @@ LocalCommandPrefix GamepadController::getPrefixForButton(uint8_t buttonCode)
         }
         else if (name == ROTATE_CCW_DIGITAL)
         {
-            local_command_prefix = LocalCommandPrefix::PREFIX_ROTATION_CCW;
+            local_command_prefix = LocalCommandPrefix::PREFIX_ROTATION_CCW_DIGITAL;
         }
         else if (name == ROTATE_CW_DIGITAL)
         {
-            local_command_prefix = LocalCommandPrefix::PREFIX_ROTATION_CW;
+            local_command_prefix = LocalCommandPrefix::PREFIX_ROTATION_CW_DIGITAL;
         }
     }
     return local_command_prefix;
+}
+
+float GamepadController::getLowerBoundForPrefix(const LocalCommandPrefix prefix) {
+    if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CCW_ANALOG || prefix == LocalCommandPrefix::PREFIX_ROTATION_CW_ANALOG){
+        return Constants::NEUTRAL_ANALOG_VALUE;
+    }
+    else return Constants::MIN_ANALOG_VALUE;
 }
 
 /*

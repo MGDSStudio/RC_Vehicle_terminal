@@ -62,9 +62,9 @@ private:
     static float map(LocalCommandPrefix local_command_prefix, float rawGamepadValue)
     {
         float min;
-        if (local_command_prefix == LocalCommandPrefix::PREFIX_NOISE_ANALOG)
+        if (local_command_prefix == LocalCommandPrefix::PREFIX_NOISE_ANALOG || local_command_prefix == LocalCommandPrefix::PREFIX_ROTATION_CW_ANALOG || local_command_prefix == LocalCommandPrefix::PREFIX_ROTATION_CCW_ANALOG)
         {
-            min = Constants::NEUTRAL_GAMEPAD_AXIS_VALUE;
+            min = Constants::NEUTRAL_ANALOG_VALUE;
         }
         else
         {
@@ -73,6 +73,7 @@ private:
         return GeometrieLibrary::map(rawGamepadValue, Constants::MIN_GAMEPAD_AXIS_VALUE, Constants::MAX_GAMEPAD_AXIS_VALUE, min, Constants::MAX_ANALOG_VALUE);
     }
 
+    float getLowerBoundForPrefix(const LocalCommandPrefix prefix);
 };
 
 

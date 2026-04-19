@@ -41,6 +41,8 @@ public:
         if (axis == xAxis) return ROTATION_ANALOG;
         else if (axis == yAxis) return MOVEMENT_ANALOG;
         else if (axis == buzzerAxis) return BUZZER_ANALOG;
+        else if (axis == rotationCCW) return ROTATION_CCW_ANALOG;
+        else if (axis == rotationCW) return ROTATION_CW_ANALOG;
         else return NO_DATA;
     }
 
@@ -64,7 +66,10 @@ private:
         int rightDigital = SDL_GAMEPAD_BUTTON_DPAD_RIGHT;
         int upDigital = SDL_GAMEPAD_BUTTON_DPAD_UP;
         int downDigital = SDL_GAMEPAD_BUTTON_DPAD_DOWN;
-        SDL_GamepadAxis buzzerAxis = SDL_GAMEPAD_AXIS_RIGHT_TRIGGER;
+        SDL_GamepadAxis buzzerAxis = SDL_GAMEPAD_AXIS_RIGHTY;
+        SDL_GamepadAxis rotationCCW = SDL_GAMEPAD_AXIS_LEFT_TRIGGER;
+        SDL_GamepadAxis rotationCW = SDL_GAMEPAD_AXIS_RIGHT_TRIGGER;
+
 };
 
 

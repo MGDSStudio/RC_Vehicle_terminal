@@ -93,14 +93,21 @@ void MovementController::onCommandReceived(const LocalCommand &local_command) {
         if (prefix == LocalCommandPrefix::PREFIX_MOVEMENT_FORWARD) wheelSignalsCalculatorDigital->applyMoveForward();
         else wheelSignalsCalculatorDigital->applyMoveBackward();
     }
-    else if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CW || prefix == LocalCommandPrefix::PREFIX_ROTATION_CCW) {
+    else if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CW_DIGITAL || prefix == LocalCommandPrefix::PREFIX_ROTATION_CCW_DIGITAL) {
         bool pressed = local_command.getBool();
         if (!pressed) {
             wheelSignalsCalculatorDigital->stopAll();
             return;
         }
-        if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CW) wheelSignalsCalculatorDigital->applyRotationCw();
+        if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CW_DIGITAL) wheelSignalsCalculatorDigital->applyRotationCw();
         else wheelSignalsCalculatorDigital->applyRotationCcw();
+    }
+    else if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CCW_ANALOG || prefix == LocalCommandPrefix::PREFIX_ROTATION_CW_ANALOG){
+        auto value = local_command.getFloatValue();
+        if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CCW_ANALOG){
+            wheelSignalsCalculatorAnalog->applyRotationCcw(value);
+        }
+        else wheelSignalsCalculatorAnalog->applyRotationCw(value);
     }
     else {
         //auto val = global_command.getPrefix();

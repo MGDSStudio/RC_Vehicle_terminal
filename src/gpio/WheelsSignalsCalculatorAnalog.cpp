@@ -38,17 +38,32 @@ void WheelsSignalsCalculatorAnalog::update()
 
 void WheelsSignalsCalculatorAnalog::setValue(float value, WheelActor* wheel_actor) const
 {
-    if ( value>DEAD_ZONE_MAX)
+    if ( value>=DEAD_ZONE_MAX)
     {
-        wheel_actor->setBackward(value);
+        wheel_actor->setForward(value);
     }
-    else if ( value<DEAD_ZONE_MIN)
+    else if ( value<=DEAD_ZONE_MIN)
     {
-        wheel_actor->setForward(-value);
+        wheel_actor->setBackward(-value);
     }
     else wheel_actor->stop();
 }
 
 
+void WheelsSignalsCalculatorAnalog::applyRotationCw(float valueFromOneToOne) {
+    wheelForwardLeft->setForward(valueFromOneToOne);
+    wheelBackwardLeft->setForward(valueFromOneToOne);
+
+    wheelForwardRight->setBackward(valueFromOneToOne);
+    wheelBackwardRight->setBackward(valueFromOneToOne);
+}
+
+void WheelsSignalsCalculatorAnalog::applyRotationCcw(float valueFromOneToOne) {
+    wheelForwardRight->setForward(valueFromOneToOne);
+    wheelBackwardRight->setForward(valueFromOneToOne);
+
+    wheelForwardLeft->setBackward(valueFromOneToOne);
+    wheelBackwardLeft->setBackward(valueFromOneToOne);
+}
 
 

@@ -29,6 +29,9 @@ public:
     void applyMovement(float valueBetweenMinusOneAndOne);
 
     void applyRotation(float valueBetweenMinusOneAndOne);
+    void applyRotationCcw(float valueFromOneToOne);
+    void applyRotationCw(float valueFromOneToOne);
+
     void setValue(float value, WheelActor* wheel_actor) const;
     void update();
 
@@ -54,10 +57,11 @@ private:
     inline static bool testing = false;
     inline static bool enableAnalogControl = true;
     inline static bool debug = true;
-    inline static float DEAD_ZONE_MAX = 0.15f;
+    inline static float DEAD_ZONE_MAX = 0.325f;
     inline static float DEAD_ZONE_MIN = -DEAD_ZONE_MAX;
     WheelsControlDataStruct wheels_control_data_struct;
     StickController stick_controller;
+
     static void logNotImplemented()
     {
         log("not implemented");

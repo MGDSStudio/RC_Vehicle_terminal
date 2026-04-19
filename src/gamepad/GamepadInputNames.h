@@ -21,7 +21,10 @@
    const std::string  ROTATION_DIGITAL = "ROTATION_DIGITAL";
    const std::string  MOVEMENT_ANALOG = "MOVEMENT_ANALOG";
    const std::string  ROTATION_ANALOG = "ROTATION_ANALOG";
-   const std::string  BUZZER_ANALOG = "BUZZER_ANALOG";
+   const std::string  ROTATION_CCW_ANALOG = "ROTATION_CCW_ANALOG";
+   const std::string  ROTATION_CW_ANALOG = "ROTATION_CW_ANALOG";
+
+const std::string  BUZZER_ANALOG = "BUZZER_ANALOG";
    const std::string  NO_DATA = "NO_DATA";
 
 #endif //CMAKESFMLPROJECT_GAMEPADINPUTNAMES_H
