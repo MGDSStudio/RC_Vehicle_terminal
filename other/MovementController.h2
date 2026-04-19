@@ -13,7 +13,11 @@
 //#include "WheelSignalsCalculator.h"
 #include "../src/gpio/SoftwarePin.h"
 
+
+
+
 class MovementController : public IUpdateable, LocalCommandsListener{
+
 
 public:
     MovementController();
@@ -24,17 +28,13 @@ public:
 
 
 private:
-    /*WheelActor wheelForwardLeft;
-    WheelActor wheelForwardRight;
-    WheelActor wheelBackwardLeft;
-    WheelActor wheelBackwardRight;
-    WheelSignalsCalculator* wheelSignalsCalculator;*/
     inline static const float DEAD_ZONE_MIN = -0.075;
     inline static const float DEAD_ZONE_MAX = 0.075;
 
     static bool inDeadZone(const float val) {
         return (val>=DEAD_ZONE_MIN && val<=DEAD_ZONE_MAX);
     }
+
 };
 
 

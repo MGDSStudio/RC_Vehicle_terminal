@@ -13,7 +13,6 @@ constexpr static float MAX_DEAD_ZONE_FOR_ROTATION = 0.95;
 
 void WheelsSignalsCalculatorAnalog::applyMovement(float valueBetweenMinusOneAndOne) {
     this->stick_controller.setY(valueBetweenMinusOneAndOne);
-
 }
 
 void WheelsSignalsCalculatorAnalog::applyRotation(const float valueBetweenMinusOneAndOne) {

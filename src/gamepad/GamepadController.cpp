@@ -123,6 +123,8 @@ void GamepadController::updateAxisMoved(SDL_Event* event, LocalCommand* local_co
     else
     {
         mappedAxisValue = 0;
+        local_command->setPrefix(LocalCommandPrefix::PREFIX_MOVEMENT_FORWARD);
+        local_command->setBoolValue(false);
     }
     local_command->setFloatValue(mappedAxisValue);
 }

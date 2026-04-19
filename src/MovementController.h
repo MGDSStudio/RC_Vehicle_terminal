@@ -16,6 +16,9 @@
 #include "gpio/ReleasePinSoftware.h"
 #include "gpio/WheelsSignalsCalculatorAnalog.h"
 
+enum class ControlType{
+    ANALOG, DIGITAL, NOTHING
+};
 
 class MovementController : public IUpdateable, LocalCommandsListener{
 
@@ -35,11 +38,13 @@ private:
     WheelActor wheelBackwardRight;
     WheelsSignalsCalculatorDigital* wheelSignalsCalculatorDigital;
     WheelsSignalsCalculatorAnalog* wheelSignalsCalculatorAnalog;
+    ControlType actualControl = ControlType::NOTHING;
     inline static const float DEAD_ZONE_MIN = -0.075;   //can be avoided - it was mapped in gamepad controller
     inline static const float DEAD_ZONE_MAX = 0.075; //can be avoided - it was mapped in gamepad controller
     static bool inDeadZone(const float val) {
         return (val>=DEAD_ZONE_MIN && val<=DEAD_ZONE_MAX);
     }
+
 };
 
 #endif //CMAKESFMLPROJECT_MOVEMENTCONTROLLER_H

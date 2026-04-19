@@ -79,17 +79,21 @@ void MovementController::onCommandReceived(const LocalCommand &local_command) {
     if (prefix == LocalCommandPrefix::PREFIX_MOVEMENT_ANALOG)
     {
         updateMovementAnalog(local_command.getFloatValue());
+        this->actualControl = ControlType::ANALOG;
     }
     else if (prefix == LocalCommandPrefix::PREFIX_ROTATION_ANALOG)
     {
         updateRotationAnalog(local_command.getFloatValue());
+        this->actualControl = ControlType::ANALOG;
     }
     else if (prefix == LocalCommandPrefix::PREFIX_MOVEMENT_FORWARD || prefix == LocalCommandPrefix::PREFIX_MOVEMENT_BACKWARD){
         bool pressed = local_command.getBool();
         if (!pressed) {
             wheelSignalsCalculatorDigital->stopAll();
+            this->actualControl = ControlType::NOTHING;
             return;
         }
+        this->actualControl = ControlType::DIGITAL;
         if (prefix == LocalCommandPrefix::PREFIX_MOVEMENT_FORWARD) wheelSignalsCalculatorDigital->applyMoveForward();
         else wheelSignalsCalculatorDigital->applyMoveBackward();
     }
@@ -98,16 +102,20 @@ void MovementController::onCommandReceived(const LocalCommand &local_command) {
         if (!pressed) {
             wheelSignalsCalculatorDigital->stopAll();
             return;
+            this->actualControl = ControlType::NOTHING;
         }
+        this->actualControl = ControlType::DIGITAL;
         if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CW_DIGITAL) wheelSignalsCalculatorDigital->applyRotationCw();
         else wheelSignalsCalculatorDigital->applyRotationCcw();
     }
     else if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CCW_ANALOG || prefix == LocalCommandPrefix::PREFIX_ROTATION_CW_ANALOG){
         auto value = local_command.getFloatValue();
+        if (inDeadZone)
         if (prefix == LocalCommandPrefix::PREFIX_ROTATION_CCW_ANALOG){
             wheelSignalsCalculatorAnalog->applyRotationCcw(value);
         }
         else wheelSignalsCalculatorAnalog->applyRotationCw(value);
+        this->actualControl = ControlType::ANALOG;
     }
     else {
         //auto val = global_command.getPrefix();
