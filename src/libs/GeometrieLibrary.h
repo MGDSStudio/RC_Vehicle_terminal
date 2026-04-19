@@ -49,8 +49,15 @@ public:
     static float getAngleDegrees(double x, float y) {
         float radians = std::atan2(y, x);
         float degrees = radians * (180.0 / M_PI);
-        return (degrees < 0) ? (degrees + 360.0) : degrees;
+        float result = (degrees < 0) ? (degrees + 360.0) : degrees;
+        return (360-result);
     }
+
+    /*
+    *float angle = (float)Math.atan2(y, x) * MathUtils.radiansToDegrees;
+        if (angle < 0) angle += 360;
+        return angle;
+        */
 
     static float dist(float startX, float startY, float endX, float endY) {
         float dx = endX - startX;

@@ -22,7 +22,7 @@ public:
         else mappedVelociy = GeometrieLibrary::map(radiusFromNullToOne, 0, 1, MIN_ANALOG_VALUE_FOR_WHEEL, MAX_ANALOG_VALUE_FOR_WHEEL);
         float maxVelocity = mappedVelociy;
         float minVelocity = mappedVelociy*mappedAngle;
-        if (debug) Logger::debug("Mapped angle "+ std::to_string(mappedAngle) + "source angle was: " + std::to_string(angle));
+        if (debug) Logger::debug("Mapped angle "+ std::to_string(mappedAngle) + "; source angle was: " + std::to_string(angle));
 
         if (quarter == Quarter::RIGHT_TOP) {
             wheels_control_data_struct->frontRight = minVelocity;

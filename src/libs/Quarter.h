@@ -30,7 +30,7 @@ public:
         float range;
         if (quarter == Quarter::DEAD_ZONE) {
             Logger::criticalError("Wrong input for quarter at Quarter" );
-            range = -1;
+            range = 0.0001;
         }
         else {
             if (quarter == Quarter::RIGHT_TOP) {

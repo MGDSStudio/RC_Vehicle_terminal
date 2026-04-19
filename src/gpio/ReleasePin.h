@@ -24,7 +24,7 @@ private:
     inline static int NOT_INIT_PIN_VAL = -1;
 
 protected:
-    bool debug;
+    bool debug = false;
     int pinNumber = NOT_INIT_PIN_VAL;
     std::string debugPrefixName = "PIN: ";
 
@@ -35,11 +35,11 @@ protected:
             Logger::custom(debugPrefixName, text);
         }
     }
-    void initDebug(bool debug, std::string text)
+    /*void initDebug(bool debug, std::string text)
     {
         this->debug = debug;
         this->debugPrefixName = (text +  + ": ");
-    }
+    }*/
 };
 
 
