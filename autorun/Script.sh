@@ -6,8 +6,8 @@ export DISPLAY=:0
 systemctl stop pigpiod
 killall -9 RC_Vehicle_terminal pigpiod 2>/dev/null
 rm -f /var/run/pigpio.pid
-cd /home/pi/RC_Vehicle_terminal/build || exit
-./RC_Vehicle_terminal > /home/pi/output.log 2>&1
+cd /home/mgdsstudio/RC_Vehicle_terminal/build || exit
+./RC_Vehicle_terminal > /home/mgdsstudio/RC_Vehicle_terminal/output.log 2>&1
 
 #crontab -e
 #@reboot /bin/bash /home/pi/start_vehicle.sh > /home/pi/cron_log.log 2>&1
