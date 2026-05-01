@@ -44,7 +44,7 @@ void BuzzerController::update(float tpf) {
 void BuzzerController::onCommandReceived(const LocalCommand& global_command){
     if (global_command.getPrefix() == LocalCommandPrefix::PREFIX_NOISE_DIGITAL){
         if (bool enable = global_command.getBool()){
-            buzzer.enable(true);
+            buzzer.setValue(1);
             Logger::debug("Buzzer enabled from digital command");
         }
         else {
@@ -54,13 +54,17 @@ void BuzzerController::onCommandReceived(const LocalCommand& global_command){
     }
     else if (global_command.getPrefix() == LocalCommandPrefix::PREFIX_NOISE_ANALOG) {
         float floatVal = global_command.getFloatValue();
-        float mappedFromNullUpToOne = GeometrieLibrary::map(floatVal, Constants::MIN_ANALOG_VALUE, Constants::MAX_ANALOG_VALUE, 0, Constants::MAX_ANALOG_VALUE);
-        if (mappedFromNullUpToOne<=DEAD_ZONE_VALUE) {
+        if (floatVal < 0) {
+             floatVal*=-1;
+        }
+        if (floatVal<=DEAD_ZONE_VALUE) {
             buzzer.enable(false);
             return;
         }
-        buzzer.setValue(mappedFromNullUpToOne);
-        Logger::debug("Buzzer enabled from analog command to value: " + std::to_string(mappedFromNullUpToOne) + " from original " + std::to_string(floatVal));
+        else {
+            buzzer.setValue(floatVal);
+        }
+        Logger::debug("Buzzer enabled from analog command to value: " + std::to_string(floatVal) + " from original " + std::to_string(floatVal));
     }
 }
 
